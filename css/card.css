@@ -176,8 +176,7 @@
 
 .card-text-2 {
     position: absolute;
-    left:280px;
-    top: 20px;
+    right:80px;
     bottom: 50px;
     opacity: 0;
 }
