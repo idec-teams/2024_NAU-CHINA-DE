@@ -1,0 +1,39 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* border: 5px groove rgba(20, 195, 113, 0.288); */
+    box-sizing: content-box;
+    background: none !important;
+    height: 60px;
+    z-index: 9999;
+    padding: 10px;
+    margin-bottom: 1000px;
+    transition: background-color 0.5s, top 0.3s !important;
+
+}
+
+
+.navbar.scrolled1 {
+    background: #a4d1cc !important;
+}
+
+.navbar:hover {
+    background-color: #a4d1cc !important;
+
+}
+
+.navbar a {
+    color: #ffffff
+}
+
+.dropa1.scrolled2,
+.dropa2.scrolled2,
+.dropa3.scrolled2,
+.dropa4.scrolled2 {
+    color: #07243f;
+}
+
+.navbar:hover a {
+    color: #07243f;
+}

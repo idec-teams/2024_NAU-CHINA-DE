@@ -1,0 +1,91 @@
+
+.carousel_container {
+  margin-top: 70px;
+  width: 100%;
+  height: 600px;
+}
+.out {
+  width: 1000px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+}
+.out .inner {
+  width: 100%;
+  height: 100%;
+}
+.out .inner .img {
+  width:600px;
+  height: 300px;
+  position: absolute;
+  transition: 0.3s;
+}
+.out .inner .img img {
+  width: 100%;
+  height: 100%;
+}
+.out .arrow {
+  font-size: 32px;
+}
+.out .arrow i {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  top: 84px;
+}
+.out .arrow .left {
+  left: -130px;
+  top: 120px;
+}
+.out .arrow .right {
+  left: 1100px;
+    top: 120px;
+}
+.out .button {
+  width: 175px;
+  height: 15px;
+  position: absolute;
+  z-index: 9998;
+  left: 50%;
+  top: 400px;
+  transform: translateX(-50%);
+}
+.out .button b {
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin: 0 5px;
+  cursor: pointer;
+  background: silver;
+}
+.out .button b:first-child {
+  background: #1486bb;
+}
+.out #last {
+  transform: translateX(0);
+  z-index: 9;
+  opacity: 1;
+}
+.out #first {
+  transform: translateX(200px) scale(1.3);
+  z-index: 99;
+  opacity: 1;
+}
+.out #second {
+  transform: translateX(400px);
+  z-index: 9;
+  opacity: 1;
+}
+.out #left {
+  transform: translateX(-100px);
+  z-index: 1;
+  opacity: 0;
+}
+.out #right {
+  transform: translateX(500px);
+  z-index: 1;
+  opacity: 0;
+}
+/*# sourceMappingURL=./main.css.map */

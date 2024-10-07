@@ -1,0 +1,155 @@
+.description_container {
+    width: 1000px;
+    background-color: rgb(255, 255, 255);
+    margin: 200px auto  120px auto;
+    font-family: Arial, sans-serif;
+    padding: 60px;
+    line-height: 2;
+border-radius: 20px;
+}
+
+.description_container {
+    .description_img {
+        width: 100%;
+    }
+
+    p {
+        font-size: 20px;
+        text-indent: 2em;
+        margin: 1em 0;
+    }
+
+    .caption {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .design_caption {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    th {
+        background-color: #a8d4a0;
+    }
+
+    caption {
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .note {
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    .separator {
+        border-top: 1px solid #ccc;
+        margin: 4px 0;
+    }
+
+    .references {
+        font-size: 0.7em;
+        vertical-align: super;
+        font-weight: 600;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
+
+    .reference-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .reference-item {
+        margin-bottom: 10px;
+    }
+
+    .doi {
+        color: #0066cc;
+    }
+
+
+}
+
+.figure_note {
+    font-size: 1em;
+    color: #555;
+}
+
+.content p {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.design_caption em {
+    font-style: italic;
+}
+
+.content strong {
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.table_of_content_container {
+    width: 100%;
+
+    max-width: 200px;
+    position: absolute;
+}
+
+.table_of_content {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 200px;
+    position: sticky;
+    top: 100px;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+}
+
+.table_of_content li {
+    padding: 0;
+}
+
+.table_of_content a {
+    display: block;
+    padding: 20px 10px;
+    font-size: 20px;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.table_of_content a:hover {
+    background-color: #d1d6dc;
+}
+@media (max-width: 1400px) {
+    .table_of_content_container {
+        display: none;
+    }
+}

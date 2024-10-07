@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/tu.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/piece.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/carousel.css" />
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/page_second_half.css">
+    <script src="../js/carousel.js"></script>
+    <!-- 谷歌字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../loading.gif" alt="Loading...">
+    </div>
+
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="../images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="../index.html" class="dropdown-a">
+                    <img src="../images/home1.svg" alt="" class="icon1">
+                    <img src="../images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a">
+                    <img src="../images/pro1.svg" alt="" class="icon3">
+                    <img src="../images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="./pages/Pro.html" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+
+                <a href="./notebook.html" class="dropdown-a">
+                    <img src="../images/lab1.svg" alt="" class="icon4">
+                    <img src="../images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./member.html" class="dropdown-a">
+                    <img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./member.html" class="dropdown-page cool-link2">Members</a>
+
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+
+    <!-- 轮播图主体 -->
+    <section class="carousel_container">
+        <div class="out">
+            <div class="inner">
+                <div class="img">
+                    <img src="./team原图/team头图1.JPG" alt="" />
+                </div>
+                <div class="img">
+                    <img src="./team原图/team头图2.JPG" alt="" />
+                </div>
+                <div class="img">
+                    <img src="./team原图/team头图3.JPG" alt="" />
+                </div>
+                <div class="img">
+                    <img src="./team原图/team头图4.JPG" alt="" />
+                </div>
+                <div class="img">
+                    <img src="./team原图/team头图5.JPG" alt="" />
+                </div>
+                <div class="img">
+                    <img src="./team原图/team头图6.JPG" alt="" />
+                </div>
+                <div class="img">
+                    <img src="./team原图/team头图7.JPG" alt="" />
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-chevron-left left"></i>
+                <i class="fas fa-chevron-right right"></i>
+            </div>
+            <div class="button">
+                <b class="carousel_button"></b>
+                <b class="carousel_button"></b>
+                <b class="carousel_button"></b>
+                <b class="carousel_button"></b>
+                <b class="carousel_button"></b>
+                <b class="carousel_button"></b>
+                <b class="carousel_button"></b>
+            </div>
+        </div>
+    </section>
+
+    <!-- 轮播图下面的树枝 -->
+    <section style="position: relative;margin-bottom: 150px;">
+        <img src="../images/1.svg" alt=""
+            style="position: absolute;top: -50px;left: calc(50% - 750px);z-index: 2;width: 1500px;">
+    </section>
+    <!-- 老师卡片介绍 -->
+    <section class="mentor_introduction">
+        <div class="menter">
+            <img src="../images/YANXIN.jpg" alt="">
+            <div class="menter-text">
+                <h2>Xin Yan</h2>
+                <p style="font-size: 16px;">Key Laboratory of Microbiological Engineering of Agricultural Environment, Ministry of Agriculture, College of Life
+                Sciences, Nanjing Agricultural University, Nanjing, Jiangsu, China</p>
+            </div>
+        </div>
+        <div class="menter">
+            <img src="../images/chenxi.jpg" alt="">
+            <div class="menter-text">
+                <h2>Xi Chen</h2>
+                <p style="font-size: 16px;">Department of Biochemistry & Molecular Biology, College of Life Science, Nanjing Agriculture University, Nanjing,
+                Jiangsu 210095, China</p>
+            </div>
+        </div>
+    </section>
+    <!-- 卡片人物介绍 -->
+    <section class="tabs_container">
+        <div class="tabs">
+
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone">LAB&MODEL</label>
+
+            <div class="tab">
+                <section class="card-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Wanyu Hu</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Performed the experiments, accounted for epPCR and screening.
+                            </p>
+                        </div>
+                        <div class="photo HWY">
+                            <img src="../images/cartoon_characters/胡皖豫.PNG" alt="" class="photo-1 ">
+                        </div>
+                        <img src="./single_person/hwy.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Chengyue-<br>Huang</p>
+                            <p style="position: relative; top: -24px;">LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Performed the whole experiments, analyzed the whole experimental data and made the key conclusion. 
+                            </p>
+                        </div>
+                        <div class="photo HCY">
+                            <img src="../images/cartoon_characters/黄橙玥.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/hcy.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Jun Liu</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Guided the team, supported the experiment and wiki with rich experience with contributions from other authors.</p>
+                        </div>
+                        <div class="photo LJ">
+                            <img src="../images/cartoon_characters/刘峻.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/lj.JPG" alt="" class="photo-2">
+
+                    </div>
+                </section>
+                <section class="card-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Yi Liu</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Supported the experiment with rich experience and wrote the article with contributions from other authors.
+                            </p>
+
+                        </div>
+                        <div class="photo LY">
+                            <img src="../images/cartoon_characters/刘宜.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/ly.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Kexing Lu</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Performed the experiments, accounted for epPCR, site-mutagenesis and screening.	</p>
+                        </div>
+                        <div class="photo LKX">
+                            <img src="../images/cartoon_characters/路可欣.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/lkx.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Renjie Luo</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Designed the high-throughput screening method, performed the ALE of KT2440 strain experiments, and collected the background knowledge.</p>
+                        </div>
+                        <div class="photo LRJ">
+                            <img src="../images/cartoon_characters/罗仁杰.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/lrj.JPG" alt="" class="photo-2">
+
+                    </div>
+                </section>
+                <section class="card-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Hanzhang-<br>Song</p>
+                            <p style="position: relative; top:
+                            -24px;">LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Supported the computational experiments with rich experience.</p>
+                        </div>
+                        <div class="photo SHZ">
+                            <img src="../images/cartoon_characters/宋含章.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/shz.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Yuxin Yang</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Supported the experiment with rich experience and wrote the article with contributions from other authors. </p>
+                        </div>
+                        <div class="photo YYX">
+                            <img src="../images/cartoon_characters/杨雨欣.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/yyx.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Chenhang <br>-Ye</p>
+                            <p style="position: relative; top: -24px;">LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Performed the experiments, accounted for epPCR, site-mutagenesis and screening.</p>
+                        </div>
+                        <div class="photo">
+                            <img src="../images/cartoon_characters/叶陈航.png" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/ych.JPG" alt="" class="photo-2">
+                    
+                    </div>
+                </section>
+                <section class="card-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Maolong Zhu</p>
+                            <p>LAB</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Guided the team, support the experiment with rich experience and wrote the article with contributions from other authors.</p>
+                        </div>
+                        <div class="photo ZML">
+                            <img src="../images/cartoon_characters/朱茂隆.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/zml.JPG" alt="" class="photo-2">
+                    
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Xuhui Zuo</p>
+                            <p>MODEL</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Accounted for the computational experiments, including molecular dynamic simulations, modelling the structures of proteins and so on.</p>
+                        </div>
+                        <div class="photo">
+                            <img src="../images/cartoon_characters/左旭辉.png" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/zjh.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card" style="visibility: hidden;">
+                        <div class="card-text">
+                            <p>XXX</p>
+                            <p>xxx</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>XXXXXXXXX
+                            </p>
+                            <p>XXXXXXXXX
+
+                            </p>
+                            <p>XXXXXXXXXXX</p>
+                        </div>
+                        <div class="photo">
+                            <img src="../images/cartoon_characters/刘峻.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="../images/people2.png" alt="" class="photo-2">
+
+                    </div>
+                </section>
+            </div>
+
+
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo">DESIGN&WIKI</label>
+            <div class="tab">
+                <section class="card-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <p>JiaXue Bai</p>
+                            <p>DESIGN</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Designed the logo and poster for the team, made and beautified the wiki and slides.</p>
+                        </div>
+                        <div class="photo BJX">
+                            <img src="../images/cartoon_characters/白佳雪.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/bjx.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Kexi Chen</p>
+                            <p>DESIGN</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Designed the logo and poster for the team, made and beautified the wiki and slides, helped with the wiki and finished with the photo retouching work.</p>
+                        </div>
+                        <div class="photo CKX">
+                            <img src="../images/cartoon_characters/陈可馨.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/ckx.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Ruiyao Mi</p>
+                            <p>DESIGN</p>
+                        </div>
+                        <div class="card-text-2">
+                            
+                            <p>Designed the logo and poster for the team, made and beautified the wiki and slides.</p>
+                        </div>
+                        <div class="photo MRY">
+                            <img src="../images/cartoon_characters/米芮瑶.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/mry.JPG" alt="" class="photo-2">
+
+                    </div>
+                </section>
+                <section class="card-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Wenbo-<br>Cheng</p>
+                            <p style="position: relative;top: -24px;">WIKI</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Finished the wiki and provided useful wiki tools and suggestions.</p>
+                        </div>
+                        <div class="photo CWB">
+                            <img src="../images/cartoon_characters/程文博.png" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/cwb.JPG" alt="" class="photo-2">
+
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <p>Yima Wang</p>
+                            <p>WIKI</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>Finished the wiki and provided useful wiki tools and suggestions.</p>
+                        </div>
+                        <div class="photo WYM">
+                            <img src="../images/cartoon_characters/王亦马.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="./single_person/wym.JPG" alt="" class="photo-2">
+
+                    </div>
+
+                    <div class="card" style="visibility: hidden;">
+                        <div class="card-text">
+                            <p>XXX</p>
+                            <p>xxx</p>
+                        </div>
+                        <div class="card-text-2">
+                            <p>XXXXXXXXX
+                            </p>
+                            <p>XXXXXXXXX
+
+                            </p>
+                            <p>XXXXXXXXXXX</p>
+                        </div>
+                        <div class="photo">
+                            <img src="../images/cartoon_characters/刘峻.PNG" alt="" class="photo-1">
+                        </div>
+                        <img src="../images/people2.png" alt="" class="photo-2">
+
+                    </div>
+
+                </section>
+            </div>
+            <div class="card-slider"></div>
+
+        </div>
+    </section>
+
+
+
+    <!-- 拼图 -->
+    <section class="piece-container">
+        <div class="piece piece1"><img src="./team原图/拼图1.JPG" alt="Image 1" class="piece_image1"></div>
+        <div class="piece piece2"><img src="./team原图/拼图2.JPG" alt="Image 2" class="piece_image2"></div>
+        <div class="piece piece3"><img src="./team原图/拼图3.JPG" alt="Image 3" class="piece_image3"></div>
+        <div class="piece piece4"><img src="./team原图/拼图4.JPG" alt="Image 4" class="piece_image4"></div>
+        <div class="piece piece5"><img src="./team原图/拼图5.JPG" alt="Image 5" class="piece_image5"></div>
+        <div class="piece piece6"><img src="./team原图/拼图6.JPG" alt="Image 6" class="piece_image6"></div>
+
+        <div class="full-image" id="fullImage">
+            <img src="" alt="Full View" id="fullImageView">
+        </div>
+
+        <script>
+            const pieces = document.querySelectorAll('.piece');
+            const fullImage = document.getElementById('fullImage');
+            const fullImageView = document.getElementById('fullImageView');
+
+            pieces.forEach(piece => {
+                piece.addEventListener('click', () => {
+                    const imgSrc = piece.querySelector('img').src;
+                    fullImageView.src = imgSrc;
+                    fullImage.classList.add('active');
+                });
+            });
+
+            fullImage.addEventListener('click', () => {
+                fullImage.classList.remove('active');
+            });
+        </script>
+
+
+    </section>
+    <div class="waves-container">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave"
+                    d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+                <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+                <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+            </g>
+        </svg>
+    </div>
+    </div>
+    <section class="footer">
+
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+                <img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+                <img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+                <img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+                <img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+                <img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+                <img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+                <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+                <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+                <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+                <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+                <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+                <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function handleScroll() {
+            const tags = document.querySelectorAll('.footer-tag');
+            tags.forEach(tag => {
+                if (isInViewport(tag)) {
+                    tag.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+
+</html>
