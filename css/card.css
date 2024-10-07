@@ -176,8 +176,12 @@
 
 .card-text-2 {
     position: absolute;
+<<<<<<< HEAD
     left:280px;
     top: 20px;
+=======
+    right:80px;
+>>>>>>> 914ed4aa4dc10d7c1a2a0c39d938781f31bfb64e
     bottom: 50px;
     opacity: 0;
 }
