@@ -5,14 +5,9 @@ body{
     position: fixed;
     font-family: 'Times New Roman', Times, serif;
     top: 14%;
-<<<<<<< HEAD
     left: 10%;
     width: 80%;
     font-size: 80px;
-=======
-    left: 2%;
-    font-size: 120px;
->>>>>>> 914ed4aa4dc10d7c1a2a0c39d938781f31bfb64e
     z-index: 9;
     color: #ffffff;
     transition: all  0.6s ease-in-out;
