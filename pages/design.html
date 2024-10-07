@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/tu.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/page_second_half.css">
+    <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../loading.gif" alt="Loading...">
+    </div>
+
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="../images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="../index.html" class="dropdown-a">
+                    <img src="../images/home1.svg" alt="" class="icon1">
+                    <img src="../images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a">
+                    <img src="../images/pro1.svg" alt="" class="icon3">
+                    <img src="../images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="./pages/Pro.html" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+
+                <a href="./notebook.html" class="dropdown-a">
+                    <img src="../images/lab1.svg" alt="" class="icon4">
+                    <img src="../images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./member.html" class="dropdown-a">
+                    <img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./member.html" class="dropdown-page cool-link2">Members</a>
+                    <a href="#" class="dropdown-page cool-link2">Contribution</a>
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+        <section class="table_of_content_container" style="height: 7570px;">
+            <div class="table_of_content">
+                <li><a href="#Pathway" style="font-size: 14px;">Pathway design of the secretion pathway in Bacillus subtilis</a></li>
+                <li><a href="#Enzyme" style="font-size: 14px;">Pathway design of a FADS-based ultra-high-throughput evolution of PBAT-degrading enzyme</a></li>
+                <li><a href="#Engineered" style="font-size: 14px;">Engineered KT2440 Strain Construction and ALE-Derived Mutant Isolation for TPA and BDO
+                Utilization</a></li>
+                <li><a href="#Reference" style="font-size: 14px;">Reference</a></li>
+            </div>
+        </section>
+
+    <section class="description_container">
+        <div class="title" id="Pathway">Pathway design of the secretion pathway in Bacillus subtilis</div>
+        <p>We first established an efficient secretion system within Bacillus subtilis. The signal peptide AprE was
+            fused to the
+            N-terminus of the enzymes to enable them to be effectively secreted out of the cells via the Sec pathway
+            (Figure 1a). In
+            B. subtilis, chaperones help the signal peptide to fold initially, and then SRP (signal recognition
+            particle) combines
+            with the signal peptide to form a complex. Chaperones, FtsY, and SecA together lead the enzyme to the Sec
+            transport
+            proteins. After the precursor protein traversing the membrane, the signal peptide is cleaved and degraded,
+            and the
+            extracellular chaperones assist the protein to form a stable conformation<span class="references">[1,
+                2]</span>. Then we performed Prolonged Overlap
+            Extension PCR (POE-PCR) to separately polymerize the sequences of the three enzymes and the linearized
+            pHCM12M vector
+            into polymers (Figure 1b)<span class="references">[3]</span>, which were then transformed into Bacillus subtilis. To verify whether the
+            enzymes were
+            secreted out of the cells, we cultivated the bacterium on the plates with polycaprolactone (PCL), which can
+            be
+            hydrolyzed by lipases, esterases, keratinases and so on, commonly serving as a model substrate for assessing
+            the
+            extracellular secretion of hydrolases<span class="references">[4]</span>. The observation of hydrolysis zones on the plates indicated
+            successful
+            expression and secretion of the enzymes.</p>
+        <div class="description_img_container">
+            <img src="../images/design/design1.png" alt="" class="description_img">
+        </div>
+
+        <div class="design_caption"><strong>Figure 1. (a) An efficient secretion pathway in <em>Bacillus
+                    subtilis</em>.</strong> In the pathway there
+            is the Sec signal peptide AprE separately with the genes of interest (GOI) requiring secretion downstream of
+            it.
+            GOI include <em>IsPETase</em>, <em>BsLipA</em>, and Lipase1028. Downstream of the GOI is the 6×His tag for
+            the
+            purification of the protein; <strong>(b) Flowchart of the prolonged overlap extension PCR (POE-PCR) process
+                for
+                the transformation of GOI into <em>Bacillus subtilis</em> SCK6.</strong> We obtain the linearized vector
+            and
+            DNA fragment with homologous arms by PCR reaction. During POE-PCR, GOI and the vector fragments are used
+            simultaneously as primers and templates to obtain linear multimeric DNA, which is transformed into the super
+            competent <em>Bacillus subtilis</em> SCK6 and circularized later to form recombinant plasmids. Compared to
+            plasmid, multimeric DNA exhibits higher transformation efficiency when transformed into <em>Bacillus
+                subtilis</em><span class="references">[3]</span>.
+        <div class="description_img_container">
+            <img src="../images/00.png" alt="" class="description_img">
+        </div>
+        <div class="caption">Figure 2. Construction and screening strategies for mutation libraries.
+        </div>
+        <div class="title" id="Enzyme">Pathway design of a FADS-based ultra-high-throughput evolution of PBAT-degrading enzyme</div>
+        <p>The method of screening by observing hydrolysis zones is common, straightforward, cost-effective, and simple
+            to
+            implement. However, its efficiency is limited a lot because of following drawbacks: (1) its throughput is
+            low (~104)<span class="references">[5]</span>
+            ; (2) human bias when selecting colonies may happen; (3) the measurement of hydrolysis zone size may lead
+            to errors
+            that affect the accuracy of the screening process; (4) the hydrolysis zones may overlap, making it
+            challenging to
+            accurately measure the size of each colony. Therefore, a high-throughput and precise screening method for
+            PBAT-degrading
+            enzymes in B.subtilis is needed.</p>
+
+        <p>
+            A biosensor system for sensing TPA has been developed (Figure 3a)<span class="references">[6]</span>. In this system, carboxylic acid
+            reductase (CARMm)
+            from Mycobacterium marinum and the luciferase LuxAB from Photorhabdus luminescense have been transformed
+            into Bacillus
+            subtilis. TPA can enter the cells and be reduced to aldehyde by CARMm. Then, LuxAB utilizes the aldehyde as
+            a substrate
+            to produce the corresponding acid, generating bioluminescence. By measuring the bioluminescence intensity at
+            482 nm,
+            semi-quantitative detection of TPA can be achieved<span class="references">[6]</span>. Our goal is to combine this system with FADS, which
+            couples the
+            activity of each variants with the fluorescence intensity, and finally facilitates high-throughput screening
+            (~107)
+            (Figure 3b)<span class="references"> [5, 7]</span>.
+        </p>
+        <div class="description_img_container">
+            <img src="../images/design/design3.png" alt="" class="description_img">
+        </div>
+
+        <div class="design_caption"><strong>Figure 3. Biosensor-based TPA detection coupled with bioluminescent FADS
+                screening.</strong>(a) An enzyme-coupled biosensor for detecting TPA produced by PBAT degradation. (1)
+            PBAT
+            enzymes degrade
+            PBAT, releasing
+            monomer molecules including TPA, BDO, and AA. The structure of the PBAT hydrolase is derived from our
+            evolutionarily
+            screened ND. (BDO and AA are not shown). (2) TPA can be reduced by CARMm to the corresponding dialdehyde
+            and
+            monoaldehyde (ligand molecule PPTNi not shown). These aldehydes serve as substrates for LuxAB to
+            generate
+            corresponding
+            acids and emit fluorescence, achieving bioluminescence. The excitation wavelength of the LuxAB reaction
+            is
+            482 nm, which
+            belongs to the visible cyan light spectrum. (b) Schematic diagram of FADS screening process. Bacillus
+            subtilis is
+            encapsulated in microfluidic droplets and incubated to allow cells to fully express PBAT hydrolase,
+            CARMm,
+            and LuxAB.
+            After a period of incubation, PBAT is injected into the microfluidic droplets to generate a fluorescent
+            signal.
+            Fluorescence signal detection and sorting are then performed to separate target droplets from non-target
+            droplets.
+            Droplets with strong fluorescence signals typically contain the target enzymes or cells with specific
+            biochemical
+            reaction products, while droplets with weaker fluorescence signals are considered non-target droplets. A
+            highly active
+            PBAT enzyme can degrade more TPA and achieve a higher level of luminescence.
+        </div>
+
+        <div class="title" id="Engineered">Engineered KT2440 Strain Construction and ALE-Derived Mutant Isolation for TPA and BDO
+            Utilization</div>
+        <p>To upcycle PBAT, a multifunctional P. putida KT2440 strain was engineered to secrete PET hydrolase and
+            degrade PBAT
+            hydrolysates TPA and BDO (Figure 4a). The engineering involved: (1) transforming the tph gene cluster into
+            KT2440 for
+            constitutive expression; (2) adaptive laboratory evolution (ALE) of KT2440-tph to utilize TPA and
+            1,4-butanediol; (3)
+            transforming evolved mutants into KT2440-tph. The tph gene cluster from Pseudomonas stutzeri TPA3 was
+            electroporated
+            into KT2440, enabling TPA degradation (Figure 3b and 3c). ALE experiments with wild-type and engineered
+            strains in
+            mineral salt medium supplemented with 1,4-butanediol and TPA showed increased growth rates, indicating
+            enhanced
+            utilization of BDO and TPA. Further ALE is planned to improve degradation efficiency.</p>
+        <div class="description_img_container">
+            <img src="../images/design/design4.png" alt="" class="description_img">
+        </div>
+        <div class="design_caption"><strong>Figure 4. (a) The construction process for engineered KT2440.</strong>The
+            engineering modification of Pseudomonas putida KT2440 mainly consists of three parts: (1) transforming
+            the tph gene
+            cluster into KT2440 to obtain KT2440-tph and expressing the gene cluster constitutively; (2) adaptive
+            laboratory
+            evolution (ALE) of KT2440-tph to enable the utilization of TPA as carbon sources and a certain concentration
+            of
+            1,4-butanediol; (3) transforming the mutants into the evolved KT2440-tph. (b) An engineered P. putida strain
+            with
+            abilities of PBAT depolymerization and co-degradation of TPA and BDO. Schematic of a single engineered
+            strain
+            Pseudomonas putida KT2440 capable of degrading PBAT and co-degrading its degradation products TPA and BDO.
+            The entire
+            tph gene cluster was transformed into KT2440 and constitutively expressed to achieve co-degradation of TPA
+            and BDO. (c)
+            The feature of tph cluster. A tph cluster containing genes encoding the transcriptional regulator (tphR),
+            tpa
+            transporter (tpaK), tpa 1, 2-dioxygenase (tphA), and 1, 2-dihydroxy-3, 5-cyclohexadiene-1, 4-dicarboxylate
+            dehydrogenase
+            (tphB).
+        </div>
+        <div class="title" id="Reference">Reference</div>
+        <ul class="reference-list">
+            <li class="reference-item">
+                [1] M. Hao, W. Hui, L. Shao, C. Shi, F. Lu and H. Zhang, Improving the Ability of
+                Bacilluslicheniformisto Produce
+                Alkaline Protease by Inactivating Sec Pathway Repressor Protein and Extracellular Proteases, <em>China
+                    Biotechnology</em>, <strong>44</strong>, 39-47, (2024).<br>
+                DOI: <a href="https://doi.org/10.13523/j.cb.2307018"
+                    class="doi">https://doi.org/10.13523/j.cb.2307018</a>
+            </li>
+            <li class="reference-item">
+                [2] J. de Keyzer, C. van der Does and A. J. M. Driessen, The bacterial translocase: a dynamic protein
+                channel
+                complex, <em>Cellular and Molecular Life Sciences</em>, <strong>60</strong>, 2034-2052, (2003).<br>
+                DOI: <a href="https://doi.org/10.1007/s00018-003-3006-y"
+                    class="doi">https://doi.org/10.1007/s00018-003-3006-y</a>
+            </li>
+            <li class="reference-item">
+                [3] U. Canosi, G. Morelli and T. A. Trautner, The relationship between molecular structure and
+                transformation
+                efficiency of some S. aureus plasmids isolated from B. subtilis, <em>Molecular & general genetics :
+                    MGG</em>,
+                <strong>166</strong>, 259-67, (1978).<br>
+                DOI: <a href="https://doi.org/10.1007/bf00267617" class="doi">https://doi.org/10.1007/bf00267617</a>
+            </li>
+            <li class="reference-item">
+                [4] S. M. Satti and A. A. Shah, Polyester-based biodegradable plastics: an approach towards sustainable
+                development,
+                <em>Letters in Applied Microbiology</em>, <strong>70</strong>, 413-430, (2020).<br>
+                DOI: <a href="https://doi.org/10.1111/lam.13287" class="doi">https://doi.org/10.1111/lam.13287</a>
+            </li>
+            <li class="reference-item">
+                [5] Y. Joho, V. Vongsouthi, C. Gomez, J. S. Larsen, A. Ardevol and C. J. Jackson, Improving plastic
+                degrading
+                enzymes via directed evolution, <em>Protein Eng Des Sel</em>, <strong>37</strong>, (2024).<br>
+                DOI: <a href="https://doi.org/10.1093/protein/gzae009"
+                    class="doi">https://doi.org/10.1093/protein/gzae009</a>
+            </li>
+            <li class="reference-item">
+                [6] T. Bayer, L. Pfaff, Y. Branson, A. Becker, S. Wu, U. T. Bornscheuer, et al., Biosensor and
+                chemo-enzymatic
+                one-pot cascade applications to detect and transform PET-derived terephthalic acid in living cells,
+                <em>iScience</em>, <strong>25</strong>, 104326, (2022).<br>
+                DOI: <a href="https://doi.org/10.1016/j.isci.2022.104326"
+                    class="doi">https://doi.org/10.1016/j.isci.2022.104326</a>
+            </li>
+            <li class="reference-item">
+                [7] Y. Qiao, R. Hu, D. Chen, L. Wang, Z. Wang, H. Yu, et al., Fluorescence-activated droplet sorting of
+                PET
+                degrading microorganisms, <em>J Hazard Mater</em>, <strong>424</strong>, 127417, (2022).<br>
+                DOI: <a href="https://doi.org/10.1016/j.jhazmat.2021.127417"
+                    class="doi">https://doi.org/10.1016/j.jhazmat.2021.127417</a>
+            </li>
+        </ul>
+    </section>
+        <script>
+            document.querySelectorAll('.table_of_content a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const offset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+<div class="waves-container">
+    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 300 60" preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave"
+                d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+            <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+            <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+        </g>
+    </svg>
+</div>
+</div>
+<section class="footer">
+
+    <div class="grid-wrapper">
+        <div class="grid-logo">
+            <img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+            <img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+            <img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+            <img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+            <img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+            <img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+            <img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+        </div>
+        <!-- lianjie1-4为footer右侧四列 -->
+        <div class="lianjie1">
+            <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+        </div>
+        <div class="lianjie2">
+            <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+            <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+            <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+            <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+            <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+            <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+        </div>
+        <div class="lianjie3">
+            <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+        </div>
+        <div class="lianjie4">
+            <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+            <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+        </div>
+
+    </div>
+</section>
+<script>
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function handleScroll() {
+        const tags = document.querySelectorAll('.footer-tag');
+        tags.forEach(tag => {
+            if (isInViewport(tag)) {
+                tag.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+</script>
+</body>
+
+</html>

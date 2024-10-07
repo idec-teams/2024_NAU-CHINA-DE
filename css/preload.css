@@ -1,0 +1,18 @@
+.preload{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #091c34;
+    z-index: 66666;
+    position: fixed;
+}
+
+.preload img{
+    padding-top: 5%;
+    width: 35%;
+    height: auto;
+}

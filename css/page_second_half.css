@@ -1,0 +1,304 @@
+body {
+    background-color: #222b52;
+    margin: 0;
+}
+
+.WhatisPBAT {
+    position: absolute;
+    /* background-color: #fff; */
+    width: 900px;
+    font-size: 26px;
+    color: #fff;
+    right: 20%;
+    top: -180px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.WhatisPBAT h1 {
+    border-left: 5px solid #a4d1cc;
+    padding: 5px;
+}
+
+/* gif部分 */
+
+.second_part {
+    position: relative;
+    top: -100px;
+}
+
+.gif_box {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    /* background-color: #222; */
+    z-index: 1;
+    /* position: relative; */
+    /* top: -300px; */
+
+}
+
+#gif {
+    width: 800px;
+    display: none;
+}
+
+/* 下雨部分 */
+.wrap {
+    position: relative;
+    width: 800px;
+    height: 80px;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+.water-drop {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: -85px;
+}
+
+.drop {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+.drop-one-line {
+    animation: drop-one-line 3s ease-in infinite;
+}
+
+.drop-two-line {
+    animation: drop-two-line 3s ease-in infinite;
+}
+
+.drop-three-line {
+    animation: drop-three-line 3s ease-in infinite;
+}
+
+@keyframes drop-one-line {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(240px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes drop-two-line {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(160px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes drop-three-line {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(250px);
+        opacity: 0.8;
+    }
+}
+
+.hydrolysis_circle {
+    width: 800px;
+    margin: auto;
+    position: relative;
+    top: -200px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+.hydrolysis_circle_img {
+    width: 100%;
+}
+
+.hydrolysis_circle.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* DNA两边的模糊盒子 */
+.DNA_box1,
+.DNA_box2 {
+    position: absolute;
+
+
+    /* background-color: #fff; */
+    border-radius: 10px;
+    /* Center text vertically */
+    font-size: 24px;
+    color: #ffffff;
+    transition: filter 0.5s ease;
+    filter: blur(5px);
+    /* 初始模糊效果 */
+    margin: 20px;
+    /* 添加一些间距 */
+    z-index: 100;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.DNA_box1 {
+    width: 400px;
+    height: 400px;
+    left: 50px;
+    top: -20px;
+}
+.DNA_box1 h1,
+.DNA_box2 h1 {
+    border-left: 5px solid #a4d1cc;
+    padding: 5px;
+}
+.DNA_box2 {
+    width: 440px;
+    height: 400px;
+    right: 50px;
+    top: -40px;
+}
+
+/* 易错DNA部分 */
+.DNA_line_container {
+    height: 600px;
+    perspective: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.DNA_line_container {
+    .line {
+        height: 13px;
+        background-color: #347488;
+        border-radius: 6px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        backface-visibility: hidden;
+    }
+
+    .line::before {
+        background-color: #3d5a80;
+        transform: rotateY(180deg);
+    }
+
+    .line:nth-child(3)::before {
+        background: linear-gradient(to right, #98D4C6 50%, #ADCD8D 50%);
+    }
+
+    .line:nth-child(6)::before {
+        background: linear-gradient(to right, #ADCD8D 50%, #98D4C6 50%);
+    }
+
+    .line:nth-child(7)::before {
+        background: linear-gradient(to right, #ADCD8D 50%, #3d5a80 50%);
+    }
+
+    .line:nth-child(8)::before {
+        background: linear-gradient(to right, #98D4C6 50%, #ADCD8D 50%);
+    }
+
+    .line:nth-child(9)::before {
+        background: linear-gradient(to right, #3d5a80 50%, #ADCD8D 50%);
+    }
+
+    .line:nth-child(11)::before {
+        background: linear-gradient(to right, #98D4C6 50%, #ADCD8D 50%);
+    }
+
+    .line:nth-child(12)::before {
+        background: linear-gradient(to right, #98D4C6 50%, #98D4C6 50%);
+    }
+
+    .line:nth-child(13)::before {
+        background: linear-gradient(to right, #ADCD8D 50%, #ADCD8D 50%);
+    }
+
+    .line:nth-child(14)::before {
+        background: linear-gradient(to right, #98D4C6 50%, #98D4C6 50%);
+    }
+
+    .line:nth-child(16)::before {
+        background: linear-gradient(to right, #3d5a80 50%, #98D4C6 50%);
+    }
+
+    .line:nth-child(17)::before {
+        background: linear-gradient(to right, #ADCD8D 50%, #ADCD8D 50%);
+    }
+
+    .line::after {
+        background-color: #3d5a80;
+    }
+}
+
+/* 波浪部分 */
+.parallax {
+    height: 200px;
+}
+
+.parallax>use {
+    animation: move-forever 2.1s linear infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+}
+
+.parallax>use:nth-child(2) {
+
+    animation-duration: 1.7s;
+}
+
+.parallax>use:nth-child(3) {
+
+    animation-duration: 0.9s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate(-100px, 0%);
+    }
+
+    100% {
+        transform: translate(0px, 0%);
+    }
+}
+
+.editorial {
+    display: block;
+    width: 100%;
+    height: 15em;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    .editorial {
+        height: 200px;
+    }
+}

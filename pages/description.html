@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/tu.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/page_second_half.css">
+    <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../loading.gif" alt="Loading...">
+    </div>
+
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="../images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="../index.html" class="dropdown-a">
+                    <img src="../images/home1.svg" alt="" class="icon1">
+                    <img src="../images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a">
+                    <img src="../images/pro1.svg" alt="" class="icon3">
+                    <img src="../images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="./pages/Pro.html" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+
+                <a href="./notebook.html" class="dropdown-a">
+                    <img src="../images/lab1.svg" alt="" class="icon4">
+                    <img src="../images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./member.html" class="dropdown-a">
+                    <img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./member.html" class="dropdown-page cool-link2">Members</a>
+                    <a href="#" class="dropdown-page cool-link2">Contribution</a>
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+    <section class="table_of_content_container" style="    height: 6170px;">
+        <div class="table_of_content">
+            <li><a href="#Background">Background</a></li>
+            <li><a href="#Biodegradation">Biodegradation of PBAT meets challenges</a></li>
+            <li><a href="#Goal">Our goal</a></li>
+            <li><a href="#Reference">Reference</a></li>
+        </div>
+    </section>
+
+    <section class="description_container">
+        <div class="title" id="Background">Background</div>
+        <p>Poly (butylene adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid
+            (TPA),
+            adipic
+            acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and degradable
+            polymeric
+            material, exhibiting considerable potential for widespread application in the realm of agricultural film
+            technology
+            (Figure 1a)<span class="references">[1-3]</span>. However, owever, the consequences of the growing and hard-to-reverse issue of polyethylene films on our planet are challenging, affecting both the physical environment and living organisms (Figure 1b and c)<span
+                class="references">[4-8]</span>.</p>
+                <div class="description_img_container">
+                    <img src="../images/0.png" alt="" class="description_img">
+                </div>
+                <p>
+                    <strong>Figure 1. (a) PBAT has a wide range of applications in various fields. (b) The use of PBAT agricultural film in agriculture.</strong> PBAT agricultural film can effectively reduce weeds and pests, regulate soil temperature, improve water retention capacity, reduce soil erosion, and increase crop yields by 20% to 60%. <strong>
+                        (c) Abandoned PBAT agricultural film causes large-scale plastic pollution.
+                    </strong>
+                </p>
+        <div class="title" id="Biodegradation">Biodegradation of PBAT meets challenges</div>
+        <p>As an eco-friendly and sustainable strategy to reduce and recycle plastic waste, biodegradable catalysts
+            using enzymes
+            or microorganisms meet some challenges. Firstly, the degradation of PBAT yields a mixture of TPA and AA with
+            distinct
+            physical and chemical properties (Figure 2). Microorganisms typically encounter carbon catabolite repression
+            when
+            confronted with this varied substrate mix, impeding their ability to utilize multiple substrates
+            simultaneously.
+            Additionally, PBAT hydrolysis products can be toxic, adversely affecting microbial metabolism and efficient
+            substrate
+            assimilation, particularly at high concentrations or with crude hydrolysates<span
+                class="references">[9-11]</span>.</p>
+                
+        <div class="description_img_container">
+            <img src="../images/design/description1.png" alt="" class="description_img">
+        </div>
+        
+        <p></p>
+        <div class="caption">Figure 2. Chemical structures of PBAT and PET and respective ester hydrolysis products.
+        </div>
+        <p>The hydrolysis products of PBAT contain terephthalic acid (TPA), adipic acid (AA) and 1,4-butanediol
+            (BDO)<span class="references">[3]</span>
+            .
+            Biodegradation of PET also produces TPA, suggesting that certain enzymes that degrade PET have the potential
+            to degrade
+            PBAT.</p>
+        <p>Existing PBAT-degrading enzymes and microorganisms typically require high temperatures (50-65℃) for effective
+            composting
+            (Table 1) <span class="references">[12]</span>. Jia et al. identified a serine hydrolase enzyme from
+            Thermobifida fusca FXJ-1 capable of
+            degrading PBAT
+            at 55℃, while Wallace et al. utilized proteomics to isolate an esterase from Pseudomonas pseudoalcaligenes
+            effective at
+            65℃<span class="references">[13]</span>. Nevertheless, the PBAT decomposition rates of existing
+            PBAT-degrading enzymes in room temperature
+            are generally
+            low, restricting its utilization in the context of agricultural practices<span
+                class="references">[14]</span>. Moreover, Wang et al.
+            reported that the
+            degradation rate of PBAT films in conventional agricultural soil was only 2.3% over a three-month
+            period<span class="references">[15]</span>.</p>
+
+        <table>
+            <caption>Table 1. Enzymes with PBAT degradation developed in recent years</caption>
+            <thead>
+                <tr>
+                    <th>Enzyme</th>
+                    <th>Classification</th>
+                    <th>Source</th>
+                    <th>Activity (mol/mol)*</th>
+                    <th>PBAT</th>
+                    <th>Condition</th>
+                    <th>Ref.</th>
+                    <th>Genbank</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PfL1</td>
+                    <td>Lipase</td>
+                    <td><i>Pelosinus Fermentans</i></td>
+                    <td>~130</td>
+                    <td>Film<br>Milled</td>
+                    <td>50°C 72h</td>
+                    <td>[16]</td>
+                    <td>EIW29778.1</td>
+                </tr>
+                <tr>
+                    <td>PpEst</td>
+                    <td>Esterase</td>
+                    <td><i>Pseudomonas pseudoalcaligenes</i></td>
+                    <td>~8<div class="separator"></div>~70</td>
+                    <td>Film<br>Milled</td>
+                    <td>65°C 72h</td>
+                    <td>[17]</td>
+                    <td>W6R2Y2</td>
+                </tr>
+                <tr>
+                    <td>Cbotu_EstA</td>
+                    <td>Esterase</td>
+                    <td><i>Clostridium Botulinum</i></td>
+                    <td>&lt;30</td>
+                    <td>Not specified</td>
+                    <td>50°C 72h</td>
+                    <td>[17]</td>
+                    <td>CAL82416.1</td>
+                </tr>
+                <tr>
+                    <td>Cbotu_EstB</td>
+                    <td>Esterase</td>
+                    <td><i>Clostridium botulinum</i></td>
+                    <td>~12</td>
+                    <td>Not specified</td>
+                    <td>37°C 72h</td>
+                    <td>[17]</td>
+                    <td>CAL83600.1</td>
+                </tr>
+                <tr>
+                    <td>TfCut</td>
+                    <td>Cutinase</td>
+                    <td><i>Thermobifida fusca</i></td>
+                    <td>5198</td>
+                    <td>Film</td>
+                    <td>70°C 48h</td>
+                    <td>[3]</td>
+                    <td>CBY05530</td>
+                </tr>
+                <tr>
+                    <td>IsPETase</td>
+                    <td>Cutinase</td>
+                    <td><i>Ideonella sakaiensis</i></td>
+                    <td>4868</td>
+                    <td>Film</td>
+                    <td>30°C 48h</td>
+                    <td>[3]</td>
+                    <td>A0A0K8P6T7</td>
+                </tr>
+                <tr>
+                    <td>PbPL</td>
+                    <td>Cutinase</td>
+                    <td><i>Polyangium brachysporum</i></td>
+                    <td>-</td>
+                    <td>Film</td>
+                    <td>30°C 48h</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>BurPL</td>
+                    <td>Cutinase</td>
+                    <td><i>Burkholderiales bacterium</i></td>
+                    <td>3208</td>
+                    <td>Film</td>
+                    <td>35°C 48h</td>
+                    <td>[3]</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Ple628</td>
+                    <td>Hydrolases</td>
+                    <td>Marine microbial consortium</td>
+                    <td>121</td>
+                    <td>Film</td>
+                    <td>30°C 144h</td>
+                    <td>[18]</td>
+                    <td>OK558824</td>
+                </tr>
+                <tr>
+                    <td>Ple629</td>
+                    <td>Hydrolases</td>
+                    <td>Marine microbial consortium</td>
+                    <td>1704</td>
+                    <td>Film</td>
+                    <td>30°C 72h</td>
+                    <td>[18]</td>
+                    <td>OK558825</td>
+                </tr>
+                <tr>
+                    <td>HiC</td>
+                    <td>Cutinase</td>
+                    <td><i>Humicola insolens</i></td>
+                    <td>~10,000</td>
+                    <td>Film</td>
+                    <td>50°C 72h</td>
+                    <td>[17]</td>
+                    <td>A0A075B5G4</td>
+                </tr>
+                <tr>
+                    <td>LCC</td>
+                    <td>Cutinase</td>
+                    <td>Leaf-branch compost</td>
+                    <td>4636</td>
+                    <td>Film</td>
+                    <td>70°C 24h</td>
+                    <td>[3]</td>
+                    <td>G9BY57.1</td>
+                </tr>
+                <tr>
+                    <td>ICCG</td>
+                    <td>Cutinase</td>
+                    <td>Leaf-branch compost</td>
+                    <td>5275</td>
+                    <td>Film</td>
+                    <td>75°C 24h</td>
+                    <td>[3]</td>
+                    <td>USU85609.1</td>
+                </tr>
+                <tr>
+                    <td>TcCut</td>
+                    <td>Cutinase</td>
+                    <td><i>Thermobifida cellulolysitica</i></td>
+                    <td>5361</td>
+                    <td>Film</td>
+                    <td>65°C 48h</td>
+                    <td>[3]</td>
+                    <td>ADV92526.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note">*The activity is the quantitation of products containing TPA and BTa (mol) per mol enzymes. -
+            refers
+            to not find.</p>
+
+
+        <div class="title" id="Goal">Our goal</div>
+        <p>
+            In this work, we identified three distinct enzyme candidates for targeted evolutionary engineering, with the
+            objective of developing highly efficient PBAT-degrading enzymes that exhibit optimal catalytic activity
+            under room temperature conditions. These enzyme candidates include <i>IsPETase</i>, a cutinase derived from
+            the PET-degrading bacterium <i>Ideonella sakaiensis</i>; BsLipA, a lipase from <i>Bacillus subtilis</i>; and
+            Lipase1028, which has been newly isolated in our laboratory. <i>IsPETase</i> is capable of degrading PET in
+            the glassy state at moderate temperatures (30-37°C)<span class="references">[19-22]</span>. BsLipA exhibits
+            good hydrolytic activity on ester bonds formed by medium-chain fatty acids<span class="references">[23,
+                24]</span>. Lipase1028 demonstrates significant degradation capabilities for polyurethanes (PU). Based
+            on the structural similarities between the substrates of these three enzymes and PBAT, we propose that all
+            three possess considerable evolutionary potential<span class="references">[3, 25]</span>.
+        </p>
+        <p>
+            Furthermore, we also aim to obtain an engineering single strain capable of catabolizing of PBAT-derived
+            degradation products. <i>Pseudomonas putida</i> has been recognized as a potential host organism for a
+            diverse range of biotechnological applications, including the metabolic processing of plastics <span
+                class="references">[26, 27]</span>. Wing-Jin Li et al. reported that the wild-type <i>Pseudomonas
+                putida</i> KT2440 could degrade TPA but at a very slow rate, requiring over 50 hours to degrade 20 mM
+            substrate<span class="references">[28]</span>. In this study, we transformed the gene cluster <i>tph</i>
+            derived from <i>Pseudomonas stutzeri</i> TPA3 into KT2440 to enable its degradation of TPA<span
+                class="references">[29, 30]</span>. Then, we performed adaptive laboratory evolution and metabolic
+            engineering to isolate KT2440 variants capable of utilizing 1,4-butanediol as the sole carbon source.
+            Ultimately, we will transform the evolved PBAT degradation enzyme genes which are obtained from directed
+            evolution, into the engineered KT2440 strain, aiming to create a single strain capable of efficiently
+            degrading PBAT and utilizing its degradation products, thus facilitating sustainable degradation processes
+            eventually.
+        </p>
+
+        <div class="title" id="Reference">Reference</div>
+
+        <ul class="reference-list">
+            <li class="reference-item">
+                [1] A. Kanwal, M. Zhang, F. Sharaf and C. Li, Polymer pollution and its solutions with special emphasis
+                on
+                Poly (butylene adipate terephthalate (PBAT)), <i>Polymer Bulletin</i>, <b>79</b>, 9303-9330, (2022).<br>
+                DOI: <a href="https://doi.org/10.1007/s00289-021-04065-2"
+                    class="doi">https://doi.org/10.1007/s00289-021-04065-2</a>
+            </li>
+            <li class="reference-item">
+                [2] S. Roy and J.-W. Rhim, Curcumin Incorporated Poly(Butylene Adipate-co-Terephthalate) Film with
+                Improved
+                Water Vapor Barrier and Antioxidant Properties, <i>Materials</i>, <b>13</b>, (2020).<br>
+                DOI: <a href="https://doi.org/10.3390/ma13194369" class="doi">https://doi.org/10.3390/ma13194369</a>
+            </li>
+            <li class="reference-item">
+                [3] Y. Yang, J. Min, T. Xue, P. Jiang, X. Liu, R. Peng, et al., Complete bio-degradation of
+                poly(butylene
+                adipate-co-terephtalate) via engineered cutinases, <i>Nature Communications</i>, <b>14</b>, (2023).<br>
+                DOI: <a href="https://doi.org/10.1038/s41467-023-37374-3"
+                    class="doi">https://doi.org/10.1038/s41467-023-37374-3</a>
+            </li>
+            <li class="reference-item">
+                [4] M. C. Rillig, Microplastic in Terrestrial Ecosystems and the Soil?, <i>Environmental Science &
+                    Technology</i>, <b>46</b>, 6453-6454, (2012).<br>
+                DOI: <a href="https://doi.org/10.1021/es302011r" class="doi">https://doi.org/10.1021/es302011r</a>
+            </li>
+            <li class="reference-item">
+                [5] Z. Liu, F. Huang, B. Wang, Z. Li, C. Zhao, R. Ding, et al., Soil respiration in response to biotic
+                and
+                abiotic factors under different mulching measures on rain-fed farmland, <i>Soil & Tillage Research</i>,
+                <b>232</b>, (2023).<br>
+                DOI: <a href="https://doi.org/10.1016/j.still.2023.105749"
+                    class="doi">https://doi.org/10.1016/j.still.2023.105749</a>
+            </li>
+            <li class="reference-item">
+                [6] Z. Steinmetz, C. Wollmann, M. Schaefer, C. Buchmann, J. David, J. Troeger, et al., Plastic mulching
+                in
+                agriculture. Trading short-term agronomic benefits for long-term soil degradation?, <i>Science of the
+                    Total
+                    Environment</i>, <b>550</b>, 690-705, (2016).<br>
+                DOI: <a href="https://doi.org/10.1016/j.scitotenv.2016.01.153"
+                    class="doi">https://doi.org/10.1016/j.scitotenv.2016.01.153</a>
+            </li>
+            <li class="reference-item">
+                [7] R. M. Qi, D. L. Jones, Z. Li, Q. Liu and C. R. Yan, Behavior of microplastics and plastic film
+                residues in
+                the soil environment: A critical review, <i>Science of the Total Environment</i>, <b>703</b>,
+                (2020).<br>
+                DOI: <a href="https://doi.org/10.1016/j.scitotenv.2019.134722"
+                    class="doi">https://doi.org/10.1016/j.scitotenv.2019.134722</a>
+            </li>
+            <li class="reference-item">
+                [8] D. Brennecke, B. Duarte, F. Paiva, I. Caçador and J. Canning-Clode, Microplastics as vector for
+                heavy metal
+                contamination from the marine environment, <i>Estuarine Coastal and Shelf Science</i>, <b>178</b>,
+                189-195,
+                (2016).<br>
+                DOI: <a href="https://doi.org/10.1016/j.ecss.2015.12.003"
+                    class="doi">https://doi.org/10.1016/j.ecss.2015.12.003</a>
+            </li>
+            <li class="reference-item">
+                [9] M. N. Kim, B. Y. Lee, I. M. Lee, H. S. Lee and J. S. Yoon, Toxicity and biodegradation of products
+                from
+                polyester hydrolysis, <i>Journal of Environmental Science and Health Part a-Toxic/Hazardous Substances &
+                    Environmental Engineering</i>, <b>36</b>, 447-463, (2001).<br>
+                DOI: <a href="https://doi.org/10.1081/ese-100103475"
+                    class="doi">https://doi.org/10.1081/ese-100103475</a>
+            </li>
+            <li class="reference-item">
+                [10] J. F. Pang, M. Y. Zheng, R. Y. Sun, A. Q. Wang, X. D. Wang and T. Zhang, Synthesis of ethylene
+                glycol and
+                terephthalic acid from biomass for producing PET, <i>Green Chemistry</i>, <b>18</b>, 342-359,
+                (2016).<br>
+                DOI: <a href="https://doi.org/10.1039/c5gc01771h" class="doi">https://doi.org/10.1039/c5gc01771h</a>
+            </li>
+            <li class="reference-item">
+                [11] K. Varaprasad, M. Pariguana, G. M. Raghavendra, T. Jayaramudu and E. R. Sadiku, Development of
+                biodegradable metaloxide/polymer nanocomposite films based on poly-e-caprolactone and terephthalic acid,
+                <i>Materials Science and Engineering C-Materials for Biological Applications</i>, <b>70</b>, 85-93,
+                (2017).<br>
+                DOI: <a href="https://doi.org/10.1016/j.msec.2016.08.053"
+                    class="doi">https://doi.org/10.1016/j.msec.2016.08.053</a>
+            </li>
+            <li class="reference-item">
+                [12] P. Svoboda, M. Dvorackova and D. Svobodova, Influence of biodegradation on crystallization of poly
+                (butylene
+                adipate-co-terephthalate), <i>Polymers for Advanced Technologies</i>, <b>30</b>, 552-562, (2019).<br>
+                DOI: <a href="https://doi.org/10.1002/pat.4491" class="doi">https://doi.org/10.1002/pat.4491</a>
+            </li>
+            <li class="reference-item">
+                [13] X. Jia, K. Zhao, J. Zhao, C. Lin, H. Zhang, L. Chen, et al., Degradation of poly(butylene
+                adipate-co-terephthalate) films by <i>Thermobifida fusca</i> FXJ-1 isolated from compost, <i>Journal of
+                    Hazardous
+                    Materials</i>, <b>441</b>, (2023).<br>
+                DOI: <a href="https://doi.org/10.1016/j.jhazmat.2022.129958"
+                    class="doi">https://doi.org/10.1016/j.jhazmat.2022.129958</a>
+            </li>
+            <li class="reference-item">
+                [14] A. Chorolque, C. Pozzo Ardizzi, G. Pellejero, G. Aschkar, F. J. García Navarro and R. Jiménez
+                Ballesta,
+                Incidence of bacterial diseases associated with irrigation methods on onions (<i>Allium cepa</i>), <i>J
+                    Sci Food
+                    Agric</i>, <b>98</b>, 5534-5540, (2018).<br>
+                DOI: <a href="https://doi.org/10.1002/jsfa.9101" class="doi">https://doi.org/10.1002/jsfa.9101</a>
+            </li>
+            <li class="reference-item">
+                [15] H. Wang, D. F. Wei, A. N. Zheng and H. N. Xiao, Soil burial biodegradation of antimicrobial
+                biodegradable PBAT
+                films, <i>Polymer Degradation and Stability</i>, <b>116</b>, 14-22, (2015).<br>
+                DOI: <a href="https://doi.org/10.1016/j.polymdegradstab.2015.03.007"
+                    class="doi">https://doi.org/10.1016/j.polymdegradstab.2015.03.007</a>
+            </li>
+            <li class="reference-item">
+                [16] A. Biundo, A. Hromic, T. Pavkov-Keller, K. Gruber, F. Quartinello, K. Haernvall, et al.,
+                Characterization of a
+                poly(butylene adipate-co-terephthalate)- hydrolyzing lipase from <i>Pelosinus fermentans</i>, <i>Appl
+                    Microbiol
+                    Biotechnol</i>, <b>100</b>, 1753-1764, (2016).<br>
+                DOI: <a href="https://doi.org/10.1007/s00253-015-7246-4"
+                    class="doi">https://doi.org/10.1007/s00253-015-7246-4</a>
+            </li>
+            <li class="reference-item">
+                [17] V. Perz, A. Baumschlager, K. Bleymaier, S. Zitzenbacher, A. Hromic, G. Steinkellner, et al.,
+                Hydrolysis of
+                synthetic polyesters by <i>Clostridium botulinum</i> esterases, <i>Biotechnol Bioeng</i>, <b>113</b>,
+                1024-34,
+                (2016).<br>
+                DOI: <a href="https://doi.org/10.1002/bit.25874" class="doi">https://doi.org/10.1002/bit.25874</a>
+            </li>
+            <li class="reference-item">
+                [18] I. E. Meyer Cifuentes, P. Wu, Y. Zhao, W. Liu, M. Neumann-Schaal, L. Pfaff, et al., Molecular and
+                Biochemical
+                Differences of the Tandem and Cold-Adapted PET Hydrolases Ple628 and Ple629, Isolated From a Marine
+                Microbial
+                Consortium, <i>Front Bioeng Biotechnol</i>, <b>10</b>, 930140, (2022).<br>
+                DOI: <a href="https://doi.org/10.3389/fbioe.2022.930140"
+                    class="doi">https://doi.org/10.3389/fbioe.2022.930140</a>
+            </li>
+            <li class="reference-item">
+                [19] S. Yoshida, K. Hiraga, T. Takehana, I. Taniguchi, H. Yamaji, Y. Maeda, et al., A bacterium that
+                degrades and
+                assimilates poly(ethylene terephthalate), <i>Science</i>, <b>351</b>, 1196-1199, (2016).<br>
+                DOI: <a href="https://doi.org/10.1126/science.aad6359"
+                    class="doi">https://doi.org/10.1126/science.aad6359</a>
+            </li>
+            <li class="reference-item">
+                [20] X. Han, W. D. Liu, J. W. Huang, J. T. Ma, Y. Y. Zheng, T. P. Ko, et al., Structural insight into
+                catalytic
+                mechanism of PET hydrolase, <i>Nature Communications</i>, <b>8</b>, (2017).<br>
+                DOI: <a href="https://doi.org/10.1038/s41467-017-02255-z"
+                    class="doi">https://doi.org/10.1038/s41467-017-02255-z</a>
+            </li>
+            <li class="reference-item">
+                [21] C. C. Chen, X. Han, X. Li, P. C. Jiang, D. Niu, L. X. Ma, et al., General features to enhance
+                enzymatic
+                activity of poly(ethylene terephthalate) hydrolysis, <i>Nature Catalysis</i>, <b>4</b>, 425-430,
+                (2021).<br>
+                DOI: <a href="https://doi.org/10.1038/s41929-021-00616-y"
+                    class="doi">https://doi.org/10.1038/s41929-021-00616-y</a>
+            </li>
+            <li class="reference-item">
+                [22] T. Fecker, P. Galaz-Davison, F. Engelberger, Y. Narui, M. Sotomayor, L. P. Parra, et al., Active
+                Site
+                Flexibility as a Hallmark for Efficient PET Degradation by <i>I-sakaiensis</i> PETase, <i>Biophysical
+                    Journal</i>,
+                <b>114</b>, 1302-1312, (2018).<br>
+                DOI: <a href="https://doi.org/10.1016/j.bpj.2018.02.005"
+                    class="doi">https://doi.org/10.1016/j.bpj.2018.02.005</a>
+            </li>
+            <li class="reference-item">
+                [23] K. E. Jaeger and T. Eggert, Lipases for biotechnology, <i>Current Opinion in Biotechnology</i>,
+                <b>13</b>,
+                390-397, (2002).<br>
+                DOI: <a href="https://doi.org/10.1016/s0958-1669(02)00341-5"
+                    class="doi">https://doi.org/10.1016/s0958-1669(02)00341-5</a>
+            </li>
+            <li class="reference-item">
+                [24] P. Bracco, N. van Midden, E. Arango, G. Torrelo, V. Ferrario, L. Gardossi, et al., Bacillus
+                subtilis Lipase
+                A—Lipase or Esterase?, <i>Catalysts</i>, <b>10</b>, (2020).<br>
+                DOI: <a href="https://doi.org/10.3390/catal10030308"
+                    class="doi">https://doi.org/10.3390/catal10030308</a>
+            </li>
+            <li class="reference-item">
+                [25] F. Muroi, Y. Tachibana, P. Soulnetohne, K. Yamamoto, T. Mizuno, T. Sakurai, et al.,
+                Characterization of a
+                poly(butylene adipate-co-terephthalate) hydrolase from the aerobic mesophilic bacterium <i>Bacillus
+                    pumilus</i>,
+                <i>Polymer Degradation and Stability</i>, <b>137</b>, 11-22, (2017).<br>
+                DOI: <a href="https://doi.org/10.1016/j.polymdegradstab.2016.08.053"
+                    class="doi">https://doi.org/10.1016/j.polymdegradstab.2016.08.053</a>
+            </li>
+            <li class="reference-item">
+                [26] N. Wierckx, M. A. Prieto, P. Pomposiello, V. de Lorenzo, K. O'Connor and L. M. Blank, Plastic waste
+                as a novel
+                substrate for industrial biotechnology, <i>Microbial Biotechnology</i>, <b>8</b>, 900-903, (2015).<br>
+                DOI: <a href="https://doi.org/10.1111/1751-7915.12312"
+                    class="doi">https://doi.org/10.1111/1751-7915.12312</a>
+            </li>
+            <li class="reference-item">
+                [27] R. A. Wilkes and L. Aristilde, Degradation and metabolism of synthetic plastics and associated
+                products by
+                <i>Pseudomonas</i> sp.: capabilities and challenges, <i>Journal of Applied Microbiology</i>, <b>123</b>,
+                582-593,
+                (2017).<br>
+                DOI: <a href="https://doi.org/10.1111/jam.13472" class="doi">https://doi.org/10.1111/jam.13472</a>
+            </li>
+            <li class="reference-item">
+                [28] W. J. Li, T. Narancic, S. T. Kenny, P. J. Niehoff, K. O'Connor, L. M. Blank, et al., Unraveling
+                1,4-Butanediol
+                Metabolism in <i>Pseudomonas putida</i> KT2440, <i>Frontiers in Microbiology</i>, <b>11</b>, (2020).<br>
+                DOI: <a href="https://doi.org/10.3389/fmicb.2020.00382"
+                    class="doi">https://doi.org/10.3389/fmicb.2020.00382</a>
+            </li>
+            <li class="reference-item">
+                [29] P. Liu, T. Zhang, Y. Zheng, Q. Li, Q. Liang and Q. Qi, Screening and genome analysis of a
+                <i>Pseudomonas
+                    stutzeri</i> that degrades PET monomer terephthalate, <i>Acta Microbiologica Sinica</i>, <b>62</b>,
+                200-212,
+                (2022).<br>
+                DOI: <a href="https://doi.org/10.13343/j.cnki.wsxb.20210178"
+                    class="doi">https://doi.org/10.13343/j.cnki.wsxb.20210178</a>
+            </li>
+            <li class="reference-item">
+                [30] P. Liu, Y. Zheng, Y. B. Yuan, T. Zhang, Q. B. Li, Q. F. Liang, et al., Valorization of Polyethylene
+                Terephthalate to Muconic Acid by Engineering <i>Pseudomonas Putida</i>, <i>International Journal of
+                    Molecular
+                    Sciences</i>, <b>23</b>, (2022).<br>
+                DOI: <a href="https://doi.org/10.3390/ijms231910997"
+                    class="doi">https://doi.org/10.3390/ijms231910997</a>
+            </li>
+        </ul>
+    </section>
+    <!-- 滚动到相应id向上100px的距离 -->
+    <script>
+        document.querySelectorAll('.table_of_content a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offset = 100;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <div class="waves-container">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave"
+                    d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+                <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+                <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+            </g>
+        </svg>
+    </div>
+    </div>
+    <section class="footer">
+
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+                <img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+                <img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+                <img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+                <img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+                <img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+                <img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+                <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+                <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+                <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+                <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+                <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+                <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function handleScroll() {
+            const tags = document.querySelectorAll('.footer-tag');
+            tags.forEach(tag => {
+                if (isInViewport(tag)) {
+                    tag.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+
+</html>

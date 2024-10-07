@@ -1,0 +1,239 @@
+ 
+html {
+    height: 100%;
+}
+*{
+    /* box-sizing:border-box; */
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #222b52;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* border: 5px groove rgba(20, 195, 113, 0.288); */
+    box-sizing: content-box;
+    background: #a4d1cc;
+    height: 60px;
+    z-index: 9999;
+    padding: 10px;
+    margin-bottom: 1000px;
+        transition: top 0.3s;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    z-index: 4;
+    width: 130px;
+    top: -30px;
+    
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav {
+    right: 30px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    width: 100%;
+}
+
+.nav li a {
+    position: relative;
+    padding: 15px 25px;
+    font: 700 20px '优设标题黑';
+    border: none;
+    outline: none;
+
+    display: inline-block;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.navbar a {
+    padding: 15px;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+    float: left;
+    width: 60px;
+}
+
+@media (max-width: 690px) {
+
+    /* 当窗口宽度小于600px时应用的样式 */
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4,
+    .icon_home2,
+    .icon_pro3,
+    .icon_lab4 {
+        display: none;
+        /* 隐藏图标 */
+    }
+}
+
+.dropdown-menu {
+    display: inline-block;
+}
+
+.dropdown-a {
+    padding: 0px 15px !important;
+    line-height: 60px !important;
+    position: relative;
+        color: #07243f;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+.icon_home2,
+.icon_pro3,
+.icon_lab4 {
+    opacity: 0;
+    position: absolute;
+    left: 15px;
+    width: 60px;
+}
+
+.icon1,
+.icon_home2,
+.icon3,
+.icon_pro3,
+.icon4,
+.icon_lab4 {
+    transition: opacity 1s ease;
+}
+
+.dropdown-menu:hover .icon1,
+.dropdown-menu:hover .icon3,
+.dropdown-menu:hover .icon4 {
+    opacity: 0;
+}
+
+.dropdown-menu:hover .icon_home2,
+.dropdown-menu:hover .icon_pro3,
+.dropdown-menu:hover .icon_lab4 {
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: none;
+    /* background: rgba(164, 209, 204,0.3); */
+    background: #a4d1cc;
+    position: absolute;
+    border-radius: 0 0 25px 25px;
+    width: 103px;
+    opacity: 0;
+        color: #07243f;
+}
+
+.dropdown-menu .dropdown-content a {
+    font-size: 14px;
+    display: block;
+    z-index: 10;
+    padding: 10px 10px;
+}
+
+.dropdown-page {
+    padding: 10px 20px !important;
+    text-align: center;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    -webkit-animation: dropdown 1s forwards;
+    animation: dropdown 1s forwards;
+}
+
+@-webkit-keyframes dropdown {
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    0% {
+        -webkit-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+}
+
+@keyframes dropdown {
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    0% {
+        -webkit-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+}
+
+/* 以下为下拉菜单的标签悬浮下划线动画 ,使用伪元素*/
+.cool-link2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cool-link2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    /* 本bottom用于修改与文字的距离 */
+    bottom: 7px;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: #4285f4;
+    transition: all .6s;
+    opacity: 0;
+}
+
+.cool-link2:hover:before {
+    width: 70%;
+    left: 15%;
+    right: 0;
+    opacity: 1;
+}
+
+/* 下拉菜单下划线动画结束 */
+.slide1,
+.slide2 {
+    position: absolute;
+    display: inline-block;
+    height: 60px;
+    border-radius: 10em;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+}
+
+.slide1 {
+    background-color: rgb(170, 190, 255);
+    z-index: 2;
+}
+
+.slide2 {
+    opacity: 0;
+    background-color: #3a8297;
+    z-index: 1;
+    /* box-shadow: 0 0 20px #ffffffaa inset; */
+}
+
+.squeeze {
+    transform: scale(0.9);
+}

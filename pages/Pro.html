@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/tu.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/page_second_half.css">
+    <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+    <title>Document</title>
+    <style>
+        em{
+            font-style: italic!important;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../loading.gif" alt="Loading...">
+    </div>
+
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="../images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="../index.html" class="dropdown-a">
+                    <img src="../images/home1.svg" alt="" class="icon1">
+                    <img src="../images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a">
+                    <img src="../images/pro1.svg" alt="" class="icon3">
+                    <img src="../images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="./Pro.html" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+
+                <a href="./notebook.html" class="dropdown-a">
+                    <img src="../images/lab1.svg" alt="" class="icon4">
+                    <img src="../images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./member.html" class="dropdown-a">
+                    <img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./member.html" class="dropdown-page cool-link2">Members</a>
+                    <a href="#" class="dropdown-page cool-link2">Contribution</a>
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+        <section class="table_of_content_container" style="height: 7570px;">
+            <div class="table_of_content">
+                <li><a href="#Reagents" style="font-size: 14px;">Reagents</a></li>
+                <li><a href="#Plasmids_and_Strains" style="font-size: 14px;">Plasmids and Strains</a></li>
+                <li><a href="#Primers" style="font-size: 14px;">Primers</a></li>
+                <li><a href="#Methods" style="font-size: 14px;">Methods</a></li>
+            </div>
+        </section>
+
+    <section class="description_container">
+        <div class="title" id="Reagents">Reagents</div>
+        <p> <br>
+            PBAT (Provided by Yan Xin Lab, Nanjing Agricultural University ) <br>
+            Yeast Extract (OXOID, cat. no. LP0021) <br>
+            TRYPTONE (OXOID, cat. no. LP0042) <br>
+            Agar (Solarbio, cat. no. A8190) <br>
+            Kanamycin (Solarbio, cat. no. K8020) <br>
+            Spectinomycin (Solarbio, cat. no. IS3340) <br>
+            Chloramphenicol (Solarbio, cat. no. C8050) <br>
+            1,4-Butanediol (MACKLIN, cat. no. B802727) <br>
+            TPA (MACKLIN, cat. no. T880015) <br>
+            Magnesium Chloride (Solarbio, cat. no. M8161) <br>
+            Manganese Chloride (Solarbio, cat. no. M88800) <br>  
+            NaCl (HUSHI, cat. no. 10019318) <br>
+            LB Liquid Medium (Add yeast extract, tryptone, NaCl to a final concentration of 5 g/L, 10 g/L, 10 g/L in water, respectively) <br>
+            LB Solid Medium (Add yeast extract, tryptone, NaCl, agar to a final concentration of 5 g/L, 10 g/L, 10 g/L, 1.5% agar in water, respectively) <br>
+            LB Solid Medium with 0.5% PBAT (Add yeast extract, tryptone, NaCl, agar to a final concentration of 5 g/L, 10 g/L, 10 g/L, 1.5% agar, 0.5% PBAT stock solution SPC 100 mg/ml in water, respectively) <br>
+            LB Solid Medium with 1% PBAT (Add yeast extract, tryptone, NaCl, agar to a final concentration of 5 g/L, 10 g/L, 10 g/L, 1.5% agar, 1% PBAT stock solution SPC 100 mg/ml in water, respectively) <br>
+            LB Solid Medium with 1.5% PBAT (Add yeast extract, tryptone, NaCl, agar to a final concentration of 5 g/L, 10 g/L, 10 g/L, 1.5% agar, 1.5% PBAT stock solution SPC 100 mg/ml in water, respectively) <br>
+            SPC Resistance Screening Medium (Add yeast extract, tryptone, NaCl, agar to a final concentration of 5 g/L, 10 g/L, 10 g/L, 1.5% agar, SPC 100 mg/ml in water, respectively) <br>
+            Chl SPC Resistance Screening Medium (Add yeast extract, tryptone, NaCl, agar to a final concentration of 5 g/L, 10 g/L, 10 g/L, 1.5% agar, SPC 100 mg/ml, Chl 30 mg/ml in water, respectively) <br>
+            </p>
+            <div class="title" id="Plasmids_and_Strains">Plasmids and Strains</div>
+            <p>
+                The lipase used in the experiment comes from the strain YX8[47], and the PETase enzyme, PHCM12M, KT2440, lipase1028, as well as the positive control 714, are all provided by Professor Xin Yan's laboratory at Nanjing Agricultural University. The pBBR1MCS-2-tph was kindly gifted by Professor Tianyuan Su from Shandong University.
+            </p>
+            
+            <div class="title" id="Primers">Primers</div>
+            <table>
+                <caption>Table 1. Enzymes with PBAT degradation developed in recent years</caption>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Primers</th>
+                        <th>Nucleic acid sequences (5' to 3')</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>BslipA-R</td>
+                        <td>CAGTGGTGGTGGTGGTGGTGATTCGTATTCTGTCCTCCgcc</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>BslipA-F</td>
+                        <td>GCAACATGTCTGCGCAGGCTGCTGAGCATAATCCAGTTGTGAT</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>pHCM12M-SPC-F</td>
+                        <td>GGCGGAGGACAGAATACGAATCACCACCACCACCACCACCACT</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>pHCM12M-SPC-R</td>
+                        <td>CACAACTGGATTATGCTCAGCAGCCTGCGCAGACATGTTG</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>BslipA/IsPETase-Test-F1</td>
+                        <td>CCGGGACTCAGGAGCATTTAA</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>BslipA/IsPETase-Test-R1</td>
+                        <td>TCTAGTAGAGAGCGTTCACCGACA</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>16sRNA-F</td>
+                        <td>AGAGTTTGATCCTGGCTCAG</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>16sRNA-R</td>
+                        <td>TACGGTTACCTTGTTACGACTT</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>pHCM12M-PETase-R</td>
+                        <td>GTCTTGAGGCGCGCGGAAAGTTAGCCTGCGCAGACATGTTG</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>pHCM12M-PETase-F</td>
+                        <td>GCGATTTTAGAACAGCAAATTGCTCACACCACCACCACCACCACT</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>BslipA/PETase-F</td>
+                        <td>CGTTAACGTTAATCTTTACGATGGCGTTCAGCAACATGTCTGCGCAGGCT</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>BslipA/PETase-R</td>
+                        <td>TCCGAAGATTGACTATTCTCAGATAAAGTTCAGTGGTGGTGGTGGTGGTG</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>pHCM12M-BslipA/PETase-F</td>
+                        <td>CACCACCACCACCACCACTGAACTTTATCT</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>pHCM12M-BslipA/PETase-R</td>
+                        <td>AGCCTGCGCAGACATGTTGCTGAACGCCA</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>1028-M-F1</td>
+                        <td>GTCCACGGTTATGGAGGGAATGATT</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>1028-M-R1</td>
+                        <td>AATCATTCCCTCCATAACCGTGGAC</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>1028-M-F2</td>
+                        <td>GAATGATTATAACTTCATCTCCCTTATG</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>1028-M-R2</td>
+                        <td>CATAAGGGAGATGAAGTTATAATCATTCCC</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>1028-M-F3</td>
+                        <td>AAGGAACGTATAGCGCAGTT</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>1028-M-R3</td>
+                        <td>AACTGCGCTATACGTTCCTT</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>PETase-M-F1</td>
+                        <td>TTCCGGGATATAACTCGAGACAGTCATCAATTA</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>PETase-M-R1</td>
+                        <td>TAATTGATGACTGTCTCGAGTTATATCCCGGAA</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            
+            <div class="title" id="Methods">Methods</div>
+            <p><strong>Preparation</strong> </p>
+            <p><strong>Extraciton of plasmid</strong></p> 
+            <p>According to the kit instructions for Nanjing Vazyme.</p>
+            <p><strong>PCR fragment and vector</strong></p>
+            <p>The obtained plasmids are subjected to PCR using different programs and primers. <br>
+                PCR fragment and vector respectively with corresponding primers. <br>
+                After agarose gel electrophoresis, we extract DNA from the gel. The products are stored at -20 ℃ for subsequent use. <br></p>
+            <p><strong>Preparation of PBAT Stock Solution </strong></p>
+            <p>Weigh 0.5 grams of PBAT granules and add them to a centrifuge tube along with 20 mL of hexafluoroisopropanol (HFIP) to create a solution. In a conical flask, add 100 mL of ddH2O and maintain the water temperature at around 60°C. Once the materials in the centrifuge tube are completely dissolved, slowly add the solution to the water in the conical flask while continuously shaking to prevent clumping. After adding the PBAT solution, place the conical flask in a 60°C shaking water bath for three days, and during this process, be sure to prevent the water from evaporating by regularly adding water to the water bath as needed<br></p>
+            <p><strong>Preparation of Competent Cells SCK6</strong></p>
+            <p><br>Retrieve the <em>Bacillus subtilis</em> SCK6 strain stored at -80°C and streak it on an LB agar plate to activate it. Pick a single colony from the streaked plate and inoculate it into fresh LB liquid medium. Incubate the culture overnight at 30°C with shaking at 220 rpm for 12 hours. Transfer the overnight culture into fresh LB liquid medium containing 1% xylose, starting with an OD600 of 1.0. Continue incubation at 37°C with shaking at 220 rpm for 2 hours. The resulting bacterial culture is now competent. Aliquot the competent cells. Add 10% glycerol to each aliquot. Store the aliquots at -80°C for long-term preservation.</p>
+            <p><br><strong>Preparation of KT2440 Competent Cells</strong><br>Distribute the KT2440 culture into pre-sterilized 50ml centrifuge tubes and balance them. Centrifuge at 4°C, 5000 rpm, for 5 minutes. After centrifugation, discard the supernatant, add 10-15ml of 15% glycerol, and mix well. After mixing, balance again, centrifuge at 4°C, 5000rpm, for 5 minutes. Repeat the above steps three times, and after the third centrifugation, discard the supernatant. Resuspend in 2ml of 15% glycerol to obtain KT2440 competent cells. Aliquot into 1.5ml EP tubes and store in a -20°C freezer. Electrotransformation Method to Transfer the <em>tph</em> Cluster into KT2440 Competent Cells. Take 90μl of competent cells in a PCR tube, add 2000ng of plasmid DNA (calculated according to the nucleic acid concentration), mix well, and let it stand in an ice box for 3 minutes. Take out the pre-chilled electroporation cuvette, transfer 100μl of the mixed solution from the PCR tube into the electroporation cuvette. Wipe the outside of the cuvette to remove any water, and perform electroporation with the following parameters: 1500V, 25μF, 200Ω, 1mm. After electroporation, add 500μl of LB broth to the cuvette, mix well to wash out all the liquid, thus obtaining the KT2440 strain containing the <em>tph</em> cluster. Incubate at 30°C on a shaker for 3 hours. After 3 hours of incubation, take out the culture, and from one EP tube (containing 600μl), spread 100μl onto a plate containing both chloramphenicol (Chl 30μg/ml) and kanamycin (Kan 50μg/ml). Centrifuge at 5000rpm for 2 minutes. Aspirate about 400μl of the supernatant, and spread the remaining 100μl onto the plate.<br><br><strong>Setting mutation conditions</strong><br><strong>Error-prone PCR</strong> <br>Use StarMut Random Mutagenesis Kit. Multiple small system (50μL) amplification pre-experiments were carried out, setting a series of StarMut Enhancer gradients. According to the PCR results and the mutation rate in the instructions, Enhancer volume (3μL) was determined.
+<strong>Site-directed mutagenesis</strong> <br>With the help of two bioinformatic tools: AlphaFold 3 and AutoDock 4.2.6, we spot some mutational residues, like T61N, T61K, A170S. Several pairs of degenerate primer were designed to randomly introduce mutations in <em>Is</em>PETase, <em>Bs</em>LipA, Lipase1028.<br><br><strong>Mutation</strong><br><strong>Error-prone PCR</strong><br><strong>Using the (StarMut) Error-Prone PCR Kit</strong><br>Add 25 μL of 2 × Rapid Taq Master Mix (Green Enzyme), 1 μL each of forward and reverse primers, 10 ng of PETase or BsLipA, 1-10 μL of StarMut DNA Enhancer, make up to a final volume of 50 μL with water. The error-prone PCR program is as follows: Initial denaturation at 95°C for 2 minutes, denaturation at 94°C for 30 seconds, annealing at 56°C for 1 minute, extension at 72°C for 60 seconds per kilobase (kb) (30 cycles), final extension at 72°C for 7 minutes.<br><strong>Not using the (StarMut) Error-Prone PCR Kit</strong><br>Prepare six 50 μL error-prone PCR systems with varying concentrations of Mg2+ and Mn2+, 25 μL of 2 × Phanta Max Buffer,1μL dNTP Mix(10mM each),1 μL Phanta Max Super-Fidelity DNA Polymerase, 1 μL each of primer F and R, 1 μL of DNA Template (10 ng), 1/1/1/2/2/2 μL of MnCl2 solution (25 mM), 0.5/1/2/0.5/1/2 μL of MgCl2 solution (25 mM),adjust the volume with ddH2O to 18.5/18/17/17.5/17/16 μL respectively. The PCR program is as follows: initial denaturation at 95°C for 3 minutes, denaturation at 94°C for 30 seconds, annealing at the primer's Tm for 30 seconds,extension at 72°C for 1 minute per kilobase (kb) (45 cycles), final extension at 72°C for 5 minutes.<br><br><strong>Site-Directed Mutation of </strong><em><strong>Is</strong></em><strong>PETase</strong><br>For construction of the single and double mutants of <em>Is</em>PETase, the template the pHCM12M-<em>Is</em>PETase plasmid was used along with a suitable combination of primers(Table 1S).Three pairs of primers were designed to introduce three mutations (T61N, T61K, and A170S) on two sites in <em>Is</em>PETase. The whole pHCM12M-<em>Is</em>PETase plasmid was divided into two or three parts and then amplified by two or three pairs of primers(Table S3). The consequent two or three fragments with introduced mutations were combined with ClonExpress II One Step Cloning Kit or ClonExpress MultiS One Step Cloning Kit (Vazyme, Nanjing, China), which is a cloning kit based on homologous recombination. <em>E.coli</em> DH5α was used for subsequent chemical transformation. The plasmids from individual transformants were used to DNA sequence to confirm that correct mutation was obtained. Then, plasmids with correct mutations were transformed into <em>Bacillus subtilis</em> SCK6 for subsequent hydrolysis zone screening and validation. <br><br><strong>Bioinformatics analysis</strong><br><strong>Molecular Docking </strong><strong></strong><strong></strong><strong></strong><strong>[1]</strong><strong></strong><br>Protein-small molecule docking was performed using AutoDock 4.2.6. The 3D structure of the protein receptor was obtained using AlphaFold3, and the planar conformation of BABTaB was obtained from PubChem, and then conformational conversion was performed using Rdkit to form the optimal 3D conformation required for docking and stored as a mol2 format file . Using AutoDockTools (ADT), we performed operations such as adding hydrogens to BABTaB and merging nonpolar hydrogen atoms, and calculated Gasteiger-Huiekel charges. The ligand was also stored as a file in PDBQT format.<br>The LGA algorithm energy optimisation was chosen and the Autogrid4 docking box and Autodock4 docking program with the relevant parameters were set to finally obtain the binding energies of the various docked conformers aggregated and the computer selected the binding energy with the lowest docking result and then used this docked conformation as a reference to compare the other docking results. The final screened conformations were analysed and plotted using Pymol.<br><strong>Prediction of Single Mutation Sites</strong><br>Use the HotSpot Wizard 3.0 web server to predict mutation sites. Utilize the functional hotspots corresponding to highly mutable residues located in the active site pocket or access tunnels module of the HotSpot Wizard 3.0 online service to predict the sites of mutation. This is done by calculating the mutation energy protocol to assess the stability of mutations at individual sites.The mutation energy (binding) protocol evaluates the impact of single-point mutations on protein stability. It performs an amino acid scan mutagenesis on a set of selected amino acid residues, mutating each amino acid residue to one or more specific types of amino acids. Mutation energy is the change in protein stability caused by the mutation. It is xmeasured by comparing how much energy is required for the protein to fold in its original and mutated forms. The more energy a protein requires to fold, the less stable it is.<br><strong>Molecular Dynamics (MD) Simulation</strong><br>Molecular dynamics (MD) simulations are performed using GROMACS 2024.03 software. The CHARMM36 force field and CHARMM General Force Field are used to generate parameters and topological structures for proteins and ligands, respectively. Each atom of the protein is optimized with a distance greater than 1.0 nm. The protein is then solvated with water molecules at a density of 1. The simulation system is neutralized by replacing water molecules with CLA- and SOD+ ions. Energy minimization is performed using the steepest descent method for 5.0×10^4 steps to minimize the energy consumption of the entire system, ultimately reducing unreasonable contacts or atomic overlaps in the entire system. After energy minimization, the first phase of equilibration is carried out at 300 K for 100 ps to stabilize the system's temperature. The second phase of equilibration is simulated under NPT conditions at 1 bar for 100 ps. The main purpose of the simulation is to optimize the interactions between the target protein and solvents and ions, ensuring that the simulation system is fully pre-equilibrated. All MD simulations are carried out under isothermal and isostatic conditions at a temperature of 300 K and an atmospheric pressure of 1 bar for a duration of 50 ns.<br><strong>POE-PCR (Prolonged overlap extension PCR)</strong><br>Using the (Vazyme) Phanta Max Super-Fidelity DNA Polymerase Kit: add 25 μL of 2× Buffer,1 μL of dNTP Mix (10 mM each),1 μL of Phanta Max Super-Fidelity DNA Polymerase, the vector fragment and the target gene fragment according to the ratio of their lengths, make up to a final volume of 50 μL with ddH2O. The PCR program is as follows: initial denaturation at 95°C for 3 minutes, denaturation at 95°C for 15 seconds, annealing at 60°C for 30 seconds, extension at 72°C for 90 seconds per kilobase (kb) (perform 30 cycles),final extension at 72°C for 12 minutes.<br><strong>Transformation </strong><br>Prepare plates by pouring 80 mL of solid LB medium and adding 80 μL of antibiotic solution (100 mg/ml) to each plate. Thaw the competent cells (SCK6) on ice. Add the polymer (e.g., polyethylene glycol, PEG) to the competent cells based on the brightness of the gel after electrophoresis; typically, 3 or 5 μL is sufficient. Transfer the cells with added polymer to an EP tube and secure the tube in a 37°C shaker incubator for one hour. Perform the plating in two steps: a. For the first plating, do not centrifuge or resuspend the cells. Directly plate 100 μL of the bacterial suspension per plate. b. For the second plating, centrifuge the remaining bacterial suspension from the first plating at 5000 rpm for 2 minutes. Discard the supernatant, retain 100 μL of the culture medium, resuspend the pellet, and plate. Incubate the plates overnight at 37°C.<br>This procedure allows the competent cells to take up the DNA or other genetic material contained in the polymer, leading to the transformation of the bacteria. The incubation step allows the transformed cells to grow into colonies that can be observed and selected the following day.<br><strong>Colony PCR Procedure</strong><br>First, add 27 μL of Lysis Solution I and 3 μL of Lysis Solution II, then transfer the bacterial colony. Treat at 72°C for 20 minutes. After the treatment, quickly add 3 μL of Lysis Solution III. Take 3-5 μL of the above reaction system as the template for the reaction. Add 25 μL of Green Enzyme, 2 μL of primers F/R, and make up to 50 μL with ddH2O. Proceed with the PCR reaction using the following program: initial denaturation at 95°C for 30 seconds, denaturation at 95°C for 15 seconds, annealing at 56°C for 15 seconds, extension at 72°C for (length in kb × 30 seconds) per cycle, set for 30 cycles, final extension at 72°C for 5 minutes.<br><br><strong>Screening</strong><br><strong>Screening mutant libraries separately of </strong><em><strong>Is</strong></em><strong>PETase, </strong><em><strong>Bs</strong></em><strong>LipA and Lipase1028 </strong><br>The qualitative method for assessing the hydrolytic ability of mutants is to observe the diameter of the transparent hydrolytic zone on the agar plate<br><strong>Monitoring degradation ability of different enzymes for PBAT-based films</strong><br>To determine the degradation capacity of different enzymes on PBAT, single colonies of bacteria containing various enzymes are picked and transferred into 100 ml of LB medium containing 100SPC (100 mg/ml). Then, a piece of sterile pure PBAT film (15 cm × 15 cm) is added to the culture medium. The cultures are incubated at 37°C with shaking at 180 rpm, with <em>Is</em>PETase being incubated at 30°C. Photographs are taken every 24 hours for a period of 5 days to record the degradation process.<br><strong>Morphological observation of the films</strong><br>Overall changes in the films were recorded by camera. The broken film is collected by filtration through cheesecloth, air-dried, and then photographed.<br><br><strong>Adaptive Laboratory </strong><strong>Evolution</strong><br><strong>Adaptive Laboratory </strong><strong>E</strong><strong>volution</strong><strong> of KT2440 and KT2440-tph</strong><br>Prepare 5ml of LB liquid medium and add 2μl of chloramphenicol (50,000 ppm), or add 1ml of chloramphenicol and 1ml of kanamycin, respectively. Inoculate single colonies of KT2440 and KT2440-<em>tph</em> into the tubes containing the antibiotic medium. Incubate the cultures in a shaker at 30°C and 180rpm for 24-36 hours until the OD600 reaches 1.0-2.0. Transfer the cultures to 2ml centrifuge tubes under sterile conditions in a laminar flow hood. Centrifuge at 6000 rpm for 3 minutes, discard the supernatant, and resuspend the pellet in 1ml of sterile water by vortexing to ensure complete resuspension without any sediment. Centrifuge again at 6000 rpm for 3 minutes, discard the supernatant, and repeat this washing step three times. Finally, resuspend the pellet in 500μl-1ml of sterile water to make the inoculation stock. Inoculate the stock into a conical flask containing 20ml of mineral salt medium with 300ppm of 1,4-butanediol. Cultivate the culture in a shaker at 30°C, and measure the OD600 every 12 hours.<br><br>[1] G. M. Morris, R. Huey, W. Lindstrom, M. F. Sanner, R. K. Belew, D. S. Goodsell, et al., AutoDock4 and AutoDockTools4: Automated docking with selective receptor flexibility, <em>Journal of computational chemistry</em>, <strong>30</strong>, <strong>2785-2791,</strong> (<strong>2009</strong>).<br>DOI:<a href="https://doi.org/10.1002/jcc.21256">https://doi.org/10.1002/jcc.21256</a>
+
+        
+
+
+      
+    </section>
+        <script>
+            document.querySelectorAll('.table_of_content a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const offset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+<div class="waves-container">
+    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 300 60" preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave"
+                d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+            <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+            <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+        </g>
+    </svg>
+</div>
+</div>
+<section class="footer">
+
+    <div class="grid-wrapper">
+        <div class="grid-logo">
+            <img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+            <img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+            <img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+            <img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+            <img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+            <img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+            <img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+        </div>
+        <!-- lianjie1-4为footer右侧四列 -->
+        <div class="lianjie1">
+            <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+        </div>
+        <div class="lianjie2">
+            <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+            <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+            <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+            <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+            <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+            <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+        </div>
+        <div class="lianjie3">
+            <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+        </div>
+        <div class="lianjie4">
+            <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+            <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+        </div>
+
+    </div>
+</section>
+<script>
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function handleScroll() {
+        const tags = document.querySelectorAll('.footer-tag');
+        tags.forEach(tag => {
+            if (isInViewport(tag)) {
+                tag.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+</script>
+</body>
+
+</html>

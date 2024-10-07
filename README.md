@@ -1,13 +1,5 @@
-# Wiki repoistory for iDEC 2024 | NAU-CHINA-DE
+# 9.7complete-team
 
-(This a temporary README file that needs to be updated before you submit the team wiki. Please stay tuned at [idec.io](https://idec.io) for future relevant announcements.)
+完整的team页面，包括头图（网易云音乐），svg图片，人物卡片（已添加fliter），七巧板（已添加边框）
 
-This is the wiki repository for iDEC 2024, Team: NAU-CHINA-DE.
-
-The wiki created from this repository is hosted at [idec-teams.github.io/2024_NAU-CHINA-DE](https://idec-teams.github.io/2024_NAU-CHINA-DE).
-
-The default wiki layout is powered by [MkDocs](http://mkdocs.org) with the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
-
-## License
-
-[MkDocs](http://mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) are under the MIT Licence. Contents of this wiki are under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode) Copyright License.
+基于8.17teamx2改造的team页基础完成版

@@ -1,0 +1,91 @@
+.piece-container {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    border: 5px solid #07243f;
+    overflow: hidden;
+    background: #07243f;
+}
+
+.piece {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.piece img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.piece:hover img {
+    transform: scale(1.1);
+}
+.piece1 {
+    clip-path: polygon(0 0, 390px 0, 190px 600px, 0 600px);
+}
+
+.piece2 {
+    clip-path: polygon(295px 310px, 880px 600px, 200px 600px);
+}
+
+
+.piece3 {
+    clip-path: polygon(707px 505px, 1006px 406px, 1200px 600px, 900px 600px);
+}
+
+.piece4 {
+    clip-path: polygon(400px 0, 600px 0, 794px 194px, 493px 395px,
+        300px 300px);
+}
+
+.piece5 {
+    clip-path: polygon(500px 400px, 800px 200px, 1000px 400px, 700px 500px);
+}
+
+.piece6 {
+    clip-path: polygon(610px 0, 1200px 0, 1210px 600px);
+}
+
+.piece_image1 {
+    position: relative;
+    /* 有关如何让图片显示想要的部分，可以使用相对定位 */
+    right: 50px;
+}
+.piece_image2 {
+    position: relative;
+    /* 有关如何让图片显示想要的部分，可以使用相对定位 */
+    right: 500px;
+    bottom: 400px;
+   /* 有关如何让图片进行特写部分，可以使用scale*/
+    scale: 3;
+}
+.full-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.full-image img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.full-image.active {
+    opacity: 1;
+    pointer-events: all;
+}

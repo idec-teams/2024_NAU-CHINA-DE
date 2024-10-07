@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="../lib/hash.js"></script>
+	<link rel="stylesheet" href="../css/preload.css">
+	<link rel="stylesheet" href="../css/tu.css">
+	<link rel="stylesheet" href="../css/tl.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/page_second_half.css">
+
+</head>
+
+<body>
+	<script>
+		window.addEventListener('load', function () {
+			var loader = document.getElementById('preload');
+			setTimeout(function () {
+				loader.style.display = 'none';
+			}, 2000);
+		});
+	</script>
+	<div id="preload" class="preload">
+		<link rel="stylesheet" href="../css/preload.css">
+		<img src="../loading.gif" alt="Loading...">
+	</div>
+
+	<section class="navbar" id="navbar">
+		<!-- logo部分 -->
+		<div class="logo">
+			<a href="#">
+				<img class="nav-logo" src="../images/logo.svg" alt="">
+			</a>
+		</div>
+		<!-- nav部分 -->
+		<ul id="nav" class="nav">
+			<li class="slide2"></li>
+			<li class="dropdown-menu">
+				<a href="../index.html" class="dropdown-a">
+					<img src="../images/home1.svg" alt="" class="icon1">
+					<img src="../images/home2.svg" alt="" class="icon_home2">
+					Home
+				</a>
+			</li>
+
+			<li class="dropdown-menu">
+				<a href="#" class="dropdown-a">
+					<img src="../images/pro1.svg" alt="" class="icon3">
+					<img src="../images/pro2.svg" alt="" class="icon_pro3">
+					Project
+				</a>
+				<div class="dropdown-content" style="width: 156.48px;">
+					<a href="./description.html" class="dropdown-page cool-link2">
+						Description
+					</a>
+					<a href="./design.html" class="dropdown-page cool-link2">
+						Design
+					</a>
+					<a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+						Results
+					</a>
+					<a href="#" class="dropdown-page cool-link2" target="_blank">
+						Supplement
+					</a>
+					<a href="./Pro.html" class="dropdown-page cool-link2" target="_blank">
+						Protocol
+					</a>
+				</div>
+			</li>
+			<li class="dropdown-menu">
+
+				<a href="./notebook.html" class="dropdown-a">
+					<img src="../images/lab1.svg" alt="" class="icon4">
+					<img src="../images/lab2.svg" alt="" class="icon_lab4">
+					Lab Notebook
+				</a>
+			</li>
+			<li class="dropdown-menu">
+				<a href="./member.html" class="dropdown-a">
+					<img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+					Team
+				</a>
+				<div class="dropdown-content" style="width: 140.39px;">
+					<a href="./member.html" class="dropdown-page cool-link2">Members</a>
+					<a href="#" class="dropdown-page cool-link2">Contribution</a>
+				</div>
+			</li>
+			<script>
+				var gifImage = document.getElementById('gif-image');
+
+				gifImage.addEventListener('mouseenter', function () {
+					gifImage.src = gifImage.src; // 重新加载 GIF 图像
+				});
+			</script>
+		</ul>
+	</section>
+	<script>
+		$("#nav a").on("click", function () {
+			var position = $(this).parent().position();
+			var width = $(this).parent().width();
+			$("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+		});
+		$("#nav a").on("mouseover", function () {
+			var position = $(this).parent().position();
+			var width = $(this).parent().width();
+			$("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+		});
+		$("#nav a").on("mouseout", function () {
+			$("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+		});
+		var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+		var current = $("li:nth-of-type(3) a").position();
+		$("#nav .slide1").css({ left: +current.left, width: currentWidth });
+	</script>
+	<script>
+		let lastScrollTop = 0;
+		const navbar = document.getElementById('navbar');
+
+		window.addEventListener('scroll', function () {
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+			if (scrollTop > lastScrollTop) {
+				// 向下滚动，隐藏导航栏
+				navbar.style.top = "-100px"; // 隐藏导航栏
+			} else {
+				// 向上滚动，显示导航栏
+				navbar.style.top = "0"; // 显示导航栏
+			}
+			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+		});
+	</script>
+
+
+	<div class="container" style="padding-top :100px; ">
+
+		<div id="canvas" class="cv" style="position: relative;left: 150px;">
+			<div class="turnjs-bookmark">
+				<img src="../pics/bookmark.svg" alt="">
+				<ul>
+					<li><a href="#page/7">Jul</a></li>
+					<li><a href="#page/7">week5</a></li>
+					<li><a href="#page/9">Aug</a></li>
+					<li><a href="#page/9">week1</a></li>
+					<li><a href="#page/15">week2</a></li>
+					<li><a href="#page/20">week3</a></li>
+					<li><a href="#page/26">week4</a></li>
+					<li><a href="#page/31">week5</a></li>
+					<li><a href="#page/32">Sep</a></li>
+					<li><a href="#page/32">week1</a></li>
+					<li><a href="#page/36">week2</a></li>
+					<li><a href="#page/43">week3</a></li>
+					<li><a href="#page/51">week4</a></li>
+					<li><a href="#page/60">week5</a></li>
+				</ul>
+			</div>
+			<div id="book-zoom">
+				<div class="sj-book">
+					<div depth="5" class="hard">
+						<div class="side"></div>
+					</div>
+					<div depth="5" class="hard front-side">
+						<div class="depth"></div>
+					</div>
+					<div class="own-size"></div>
+					<div class="own-size even"></div>
+					<!-- 修改页面 -->
+					<!-- 修改页面 -->
+					<!-- 修改页面 -->
+					<!-- 修改页面 -->
+					<!-- 修改页面 -->
+
+					<!-- 修改的第一个值用于确定最后封面位置 值为内容数+1-->
+					<div class="hard fixed back-side p65">
+						<div class="depth"></div>
+					</div>
+					<!-- 修改的第二个值 -->
+					<div class="hard p66"></div>
+				</div>
+			</div>
+			<div id="slider-bar" class="turnjs-slider">
+				<div id="slider"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		function loadApp() {
+
+			var flipbook = $('.sj-book');
+
+			// Check if the CSS was already loaded
+
+			if (flipbook.width() == 0 || flipbook.height() == 0) {
+				setTimeout(loadApp, 10);
+				return;
+			}
+
+			// Mousewheel
+
+			$('#book-zoom').mousewheel(function (event, delta, deltaX, deltaY) {
+
+				var data = $(this).data(),
+					step = 30,
+					flipbook = $('.sj-book'),
+					actualPos = $('#slider').slider('value') * step;
+
+				if (typeof (data.scrollX) === 'undefined') {
+					data.scrollX = actualPos;
+					data.scrollPage = flipbook.turn('page');
+				}
+
+				data.scrollX = Math.min($("#slider").slider('option', 'max') * step,
+					Math.max(0, data.scrollX + deltaX));
+
+				var actualView = Math.round(data.scrollX / step),
+					page = Math.min(flipbook.turn('pages'), Math.max(1, actualView * 2 - 2));
+
+				if ($.inArray(data.scrollPage, flipbook.turn('view', page)) == -1) {
+					data.scrollPage = page;
+					flipbook.turn('page', page);
+				}
+
+				if (data.scrollTimer)
+					clearInterval(data.scrollTimer);
+
+				data.scrollTimer = setTimeout(function () {
+					data.scrollX = undefined;
+					data.scrollPage = undefined;
+					data.scrollTimer = undefined;
+				}, 1000);
+
+			});
+
+			// Slider
+
+			$("#slider").slider({
+				min: 1,
+				max: 100,
+
+				start: function (event, ui) {
+
+					if (!window._thumbPreview) {
+						_thumbPreview = $('<div />', { 'class': 'thumbnail' }).html('<div></div>');
+						setPreview(ui.value);
+						_thumbPreview.appendTo($(ui.handle));
+					} else
+						setPreview(ui.value);
+
+					moveBar(false);
+
+				},
+
+				slide: function (event, ui) {
+
+					setPreview(ui.value);
+
+				},
+
+				stop: function () {
+
+					if (window._thumbPreview)
+						_thumbPreview.removeClass('show');
+
+					$('.sj-book').turn('page', Math.max(1, $(this).slider('value') * 2 - 2));
+
+				}
+			});
+
+
+			// URIs
+
+			Hash.on('^page\/([0-9]*)$', {
+				yep: function (path, parts) {
+
+					var page = parts[1];
+
+					if (page !== undefined) {
+						if ($('.sj-book').turn('is'))
+							$('.sj-book').turn('page', page);
+					}
+
+				},
+				nop: function (path) {
+
+					if ($('.sj-book').turn('is'))
+						$('.sj-book').turn('page', 1);
+				}
+			});
+
+			// Arrows
+
+			$(document).keydown(function (e) {
+
+				var previous = 37, next = 39;
+
+				switch (e.keyCode) {
+					case previous:
+
+						$('.sj-book').turn('previous');
+
+						break;
+					case next:
+
+						$('.sj-book').turn('next');
+
+						break;
+				}
+
+			});
+
+
+			// Flipbook
+			// 修改页面树木
+			flipbook.bind(($.isTouch) ? 'touchend' : 'click', zoomHandle);
+
+			flipbook.turn({
+				elevation: 50,
+				acceleration: !isChrome(),
+				autoCenter: true,
+				gradients: true,
+				duration: 1000,
+				// 修改的第五个值，值为内容数+2
+				pages: 66,
+				when: {
+					turning: function (e, page, view) {
+
+						var book = $(this),
+							currentPage = book.turn('page'),
+							pages = book.turn('pages');
+
+						if (currentPage > 3 && currentPage < pages - 3) {
+
+							if (page == 1) {
+								book.turn('page', 2).turn('stop').turn('page', page);
+								e.preventDefault();
+								return;
+							} else if (page == pages) {
+								book.turn('page', pages - 1).turn('stop').turn('page', page);
+								e.preventDefault();
+								return;
+							}
+						} else if (page > 3 && page < pages - 3) {
+							if (currentPage == 1) {
+								book.turn('page', 2).turn('stop').turn('page', page);
+								e.preventDefault();
+								return;
+							} else if (currentPage == pages) {
+								book.turn('page', pages - 1).turn('stop').turn('page', page);
+								e.preventDefault();
+								return;
+							}
+						}
+
+						updateDepth(book, page);
+
+						if (page >= 2)
+							$('.sj-book .p2').addClass('fixed');
+						else
+							$('.sj-book .p2').removeClass('fixed');
+
+						if (page < book.turn('pages'))
+							// 修改的第三个值，值为内容数+1
+							$('.sj-book .p65').addClass('fixed');
+						else
+							// 修改的第四个只，+1
+							$('.sj-book .p65').removeClass('fixed');
+
+						Hash.go('page/' + page).update();
+
+					},
+
+					turned: function (e, page, view) {
+
+						var book = $(this);
+
+						if (page == 2 || page == 3) {
+							book.turn('peel', 'br');
+						}
+
+						updateDepth(book);
+
+						$('#slider').slider('value', getViewNumber(book, page));
+
+						book.turn('center');
+
+					},
+
+					start: function (e, pageObj) {
+
+						moveBar(true);
+
+					},
+
+					end: function (e, pageObj) {
+
+						var book = $(this);
+
+						updateDepth(book);
+
+						setTimeout(function () {
+
+							$('#slider').slider('value', getViewNumber(book));
+
+						}, 1);
+
+						moveBar(false);
+
+					},
+
+					missing: function (e, pages) {
+
+						for (var i = 0; i < pages.length; i++) {
+							addPage(pages[i], $(this));
+						}
+
+					}
+				}
+			});
+
+
+			$('#slider').slider('option', 'max', numberOfViews(flipbook));
+
+			flipbook.addClass('animated');
+
+			// Show canvas
+
+			$('#canvas').css({ visibility: '' });
+		}
+
+		// Hide canvas
+
+		$('#canvas').css({ visibility: 'hidden' });
+
+		// Load turn.js
+
+		yepnope({
+			test: Modernizr.csstransforms,
+			yep: ['../lib/turn.min.js'],
+			nope: ['../lib/turn.html4.min.js', '../css/jquery.ui.html4.css', '../css/steve-jobs-html4.css'],
+			both: ['../js/steve-jobs.js', '../css/jquery.ui.css', '../css/steve-jobs.css'],
+			complete: loadApp
+		});
+
+	</script>
+	<div class="waves-container">
+		<svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 300 60" preserveAspectRatio="none">
+			<defs>
+				<path id="gentle-wave"
+					d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+			</defs>
+			<g class="parallax">
+				<use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+				<use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+				<use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+			</g>
+		</svg>
+	</div>
+	</div>
+	<section class="footer">
+
+		<div class="grid-wrapper">
+			<div class="grid-logo">
+				<img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+				<img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+				<img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+				<img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+				<img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+				<img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+				<img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+			</div>
+			<!-- lianjie1-4为footer右侧四列 -->
+			<div class="lianjie1">
+				<h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+			</div>
+			<div class="lianjie2">
+				<h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+				<h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+				<h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+				<h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+				<h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+				<h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+			</div>
+			<div class="lianjie3">
+				<h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+			</div>
+			<div class="lianjie4">
+				<h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+				<h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+			</div>
+
+		</div>
+	</section>
+	<script>
+		function isInViewport(element) {
+			const rect = element.getBoundingClientRect();
+			return (
+				rect.top >= 0 &&
+				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+			);
+		}
+
+		function handleScroll() {
+			const tags = document.querySelectorAll('.footer-tag');
+			tags.forEach(tag => {
+				if (isInViewport(tag)) {
+					tag.classList.add('visible');
+				}
+			});
+		}
+
+		window.addEventListener('scroll', handleScroll);
+	</script>
+</body>
+
+</html>

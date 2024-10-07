@@ -1,11 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- AOS CSS -->
+
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/index-navbar.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/tu.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/preload.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/page_second_half.css">
+    <link rel="stylesheet" href="./css/tl.css">
+    <script type="text/javascript" src="./extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="./extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="./extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./extras/modernizr.2.5.3.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
+
 <body>
-    <h1>Hello</h1>
+    <!-- 导航栏 -->
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="./images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="./index.html" class="dropdown-a dropa1">
+                    <img src="./images/home1.svg" alt="" class="icon1">
+                    <img src="./images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a dropa2">
+                    <img src="./images/pro1.svg" alt="" class="icon3">
+                    <img src="./images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./pages/description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./pages/design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="./pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="./pages/Pro.html" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./pages/notebook.html" class="dropdown-a dropa3">
+                    <img src="./images/lab1.svg" alt="" class="icon4">
+                    <img src="./images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./pages/member.html" class="dropdown-a dropa4">
+                    <img src="./images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./pages/member.html" class="dropdown-page cool-link2">Members</a>
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <!-- 使导航栏会隐藏 -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+    <!-- 首页专用 -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            const dropdownA1 = document.querySelector('.dropa1');
+            const dropdownA2 = document.querySelector('.dropa2');
+            const dropdownA3 = document.querySelector('.dropa3');
+            const dropdownA4 = document.querySelector('.dropa4');
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled1');
+                dropdownA1.classList.add('scrolled2');
+                dropdownA2.classList.add('scrolled2');
+                dropdownA3.classList.add('scrolled2');
+                dropdownA4.classList.add('scrolled2');
+            } else {
+                navbar.classList.remove('scrolled1');
+                dropdownA1.classList.remove('scrolled2');
+                dropdownA2.classList.remove('scrolled2');
+                dropdownA3.classList.remove('scrolled2');
+                dropdownA4.classList.remove('scrolled2');
+            }
+        });
+    </script>
+
+
+    <!-- 加载动画 -->
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="./preload.css">
+        <img src="./loading.gif" alt="Loading...">
+    </div>
+
+    <div class="titlebox">
+        <h1 class="title" id="title">Lorem ipsum dolor elit. Officia, voluptatibus!</h1>
+    </div>
+    <script>
+        const title = document.getElementById('title');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 500) {
+                title.style.position = 'static'; // 滚动到500px时变为static
+            } else {
+                title.style.position = 'fixed';  // 否则保持fixed
+            }
+        });
+    </script>
+    <div class="container" style="padding-top: 100px;">
+        <div class="scroll_inner">
+            <div class="cvsb">
+                <canvas id="gifCanvas_earth" width="500" height="500" class="cvs" data-aos="silde-right"></canvas>
+
+            </div>
+            <div class="open">
+                <img class="lft" src="./images/headpic/1.svg" alt="" id="lft">
+                <img class="rgt" src="./images/headpic/2.svg" alt="" id="rgt">
+                <img class="lft2" src="./images/headpic/3.svg" alt="" id="lft2">
+                <img class="rgt2" src="./images/headpic/4.svg" alt="" id="rgt2">
+                <img class="mid" src="./images/headpic/5.svg" alt="" id="mid0">
+            </div>
+            <!-- 夹在头和尾之间 -->
+            <section class="second_part" style="position: relative;top: 1000px;">
+                <div class="WhatisPBAT" id="pbContainer">
+                    <h1>PBAT introduction</h1>
+                    Poly (butylene adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid (TPA), adipic
+                    acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and degradable polymeric
+                    material, exhibiting considerable potential for widespread application in the realm of agricultural film technology.
+                </div>
+                <script>
+                    const pbContainer = document.getElementById('pbContainer');
+                    const pbPosition = pbContainer.offsetTop; // 获取 div 的位置
+
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY + window.innerHeight >= pbPosition) {
+                            pbContainer.classList.add('visible'); // 添加类以触发效果
+                        }
+                    });
+                </script>
+                <!-- gif盒子没有设置高度所以初始
+            高度为0，给gif图片绝对定位以使其与波浪有合适的排版 -->
+        
+                <div class="gif_box"><img id="gif" src="./images/PBAT1.gif" alt="GIF"></div>
+                <!-- 当gif距离顶部有1800px时开始播放，第一个gif播放完后（4.5s）切换至第二个gif循环播放 -->
+                <script>
+                    let gifPlayed = false;
+
+                    window.addEventListener('scroll', () => {
+                        const gif = document.getElementById('gif');
+                        const scrollPosition = window.scrollY + window.innerHeight;
+
+                        if (!gifPlayed && scrollPosition > 1000) {
+                            gif.style.display = 'block';
+                            gif.src = './images/PBAT1.gif';
+                            gifPlayed = true;
+
+                            setTimeout(() => {
+                                gif.src = './images/PBAT2.gif';
+                            }, 4500); // Adjust 3000 to the duration of PBAT1.gif in milliseconds
+                        } else if (gifPlayed && gif.src.includes('PBAT2.gif')) {
+                            gif.style.display = 'block';
+                        }
+                    });
+                </script>
+                <!-- 下雨部分 -->
+                <div class="wrap">
+                    <svg class="water-drop" viewBox="0 0 800 400">
+                        <defs>
+                            <filter id="water" x="0" y="0">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  
+                                                                   0 1 0 0 0  
+                                                                   0 0 1 0 0  
+                                                                   0 0 0 19 -9" result="goo" />
+                            </filter>
+                        </defs>
+                        <g filter="url(#water)">
+                            <rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" />
+                            <!-- Group 1 -->
+                            <circle class="drop drop-one" cx="145" cy="55" r="25" fill="#a6c6db">
+                            </circle>
+                            <circle class="drop drop-two drop-one-line" cx="145" cy="55" r="25" fill="#a6c6db"
+                                style="--speed: 2000ms;animation-delay: 4.5s;"></circle>
+                            <!-- Group 2 -->
+                            <circle class="drop drop-one" cx="460" cy="34" r="25" fill="#a6c6db"></circle>
+                            <circle class="drop drop-two drop-two-line" cx="460" cy="34" r="25" fill="#a6c6db"
+                                style="--speed: 2000ms;animation-delay: 5.1s;"></circle>
+                            <!-- Group 5 -->
+                            <circle class="drop drop-one" cx="665" cy="45" r="25" fill="#a6c6db"></circle>
+                            <circle class="drop drop-two drop-three-line" cx="665" cy="45" r="25" fill="#a6c6db"
+                                style="--speed: 2700ms;animation-delay: 5.7s;">
+                            </circle>
+                        </g>
+                    </svg>
+
+                </div>
+                <!-- 当滚动到这时经过4s开始播放 -->
+                <!-- 涟漪部分 -->
+                <div class="hydrolysis_circle" id="circle">
+                    <img src="./images/PBAT3.gif" alt="Hydrolysis Animation" class="hydrolysis_circle_img">
+                </div>
+                <script>
+                    let animationStarted = false;
+
+                    window.addEventListener('scroll', () => {
+                        const wrap = document.querySelector('.wrap');
+                        const circle = document.getElementById('circle');
+                        const scrollPosition = window.scrollY + window.innerHeight;
+
+                        if (!animationStarted && scrollPosition > 1000) {
+                            animationStarted = true;
+
+                            setTimeout(() => {
+                                wrap.classList.add('active');
+                                const drops = document.querySelectorAll('.drop');
+                                drops.forEach(drop => {
+                                    drop.style.animationPlayState = 'running';
+                                    drop.style.opacity = 1;
+                                });
+
+                                setTimeout(() => {
+                                    circle.classList.add('show');
+                                }, 0); // Delay of 3 seconds
+                            }, 4000); // Delay of 4.5 seconds
+                        }
+                    });
+                </script>
+                <!-- 易错DNA部分 -->
+                <div class="DNA_line_container" id="box">
+                    <div class="DNA_box1" id="DNABox1">
+                        <div><h1>Development of PBAT hydrolases</h1>
+                        We selected IsPETase, BsLipA, and Lipase1028 as the starting points for directed evolution and established three
+                        mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone screening method was employed to
+                        endow them with the ability to degrade PBAT.</div>
+                    </div>
+                    <div class="DNA_box2" id="DNABox2">
+                        <div>
+                            <h1>Development of engineered Pseudomonas putida KT2440 strain</h1>
+                            
+                            The evolved PBAT hydrolases were transformed into Pseudomonas putida KT2440-tph, which had undergone adaptive laboratory
+                            evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO) as carbon sources. This
+                            allowed the construction of a KT2440 strain with high PBAT degradation capacity and the ability to grow using its
+                            degradation products.
+                        </div>
+                    </div>
+
+                    <script>
+                        const DNA_box1 = document.querySelector('.DNA_box1');
+                        const DNA_box2 = document.querySelector('.DNA_box2');
+
+                        DNA_box1.addEventListener('mouseenter', () => {
+                            DNA_box1.style.filter = 'blur(0)'; // 鼠标进入时清晰
+                        });
+
+                        DNA_box2.addEventListener('mouseenter', () => {
+                            DNA_box2.style.filter = 'blur(0)'; // 鼠标进入时清晰
+                        });
+                    </script>
+                    <div class="line" style="top: 20px; width: 100px; transition-delay: 0s;"></div>
+                    <div class="line" style="top: 50px; width: 200px; transition-delay: 0.02s;"></div>
+                    <div class="line" style="top: 80px; width: 300px; transition-delay: 0.04s;"></div>
+                    <div class="line" style="top: 110px; width: 200px; transition-delay: 0.06s;"></div>
+                    <div class="line" style="top: 140px; width: 100px; transition-delay: 0.08s;"></div>
+                    <div class="line" style="top: 170px; width: 200px; transition-delay: 0.1s;"></div>
+                    <div class="line" style="top: 200px; width: 300px; transition-delay: 0.12s;"></div>
+                    <div class="line" style="top: 230px; width: 200px; transition-delay: 0.14s;"></div>
+                    <div class="line" style="top: 260px; width: 100px; transition-delay: 0.16s;"></div>
+                    <div class="line" style="top: 290px; width: 200px; transition-delay: 0.18s;"></div>
+                    <div class="line" style="top: 320px; width: 300px; transition-delay: 0.2s;"></div>
+                    <div class="line" style="top: 350px; width: 200px; transition-delay: 0.22s;"></div>
+                    <div class="line" style="top: 380px; width: 100px; transition-delay: 0.24s;"></div>
+                    <div class="line" style="top: 410px; width: 200px; transition-delay: 0.26s;"></div>
+                    <div class="line" style="top: 440px; width: 300px; transition-delay: 0.28s;"></div>
+                    <div class="line" style="top: 470px; width: 200px; transition-delay: 0.30s;"></div>
+                    <div class="line" style="top: 500px; width: 100px; transition-delay: 0.32s;"></div>
+                </div>
+                <script>
+                    const container = document.getElementById('box');
+                    const lines = container.querySelectorAll('.line');
+
+                    function rotateLines(event) {
+                        const halfWidth = container.offsetWidth / 2;
+                        if (event.clientX - container.getBoundingClientRect().left > halfWidth) {
+                            lines.forEach(line => {
+                                line.style.transform = 'translateX(-50%) rotateY(180deg)';
+                            });
+                        } else {
+                            lines.forEach(line => {
+                                line.style.transform = 'translateX(-50%) rotateY(0deg)';
+                            });
+                        }
+                    }
+
+                    document.addEventListener('mousemove', rotateLines);
+                </script>
+            </section>
+
+            <h1 class="t1 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">Poly (butylene
+                adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid (TPA),
+                adipic
+                acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and
+                degradable polymeric
+                material, exhibiting considerable potential for widespread application in the realm of agricultural film
+                technology.</h1>
+            <h1 class="t2 aos-hover-zoom" data-aos="fade-up-right" data-aos-duration="1500ms">We selected IsPETase,
+                BsLipA, and Lipase1028 as the starting points for directed evolution and established three
+                mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone screening method
+                was employed to
+                endow them with the ability to degrade PBAT.</h1>
+            <h1 class="t3 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">The evolved PBAT hydrolases
+                were transformed into Pseudomonas putida KT2440-tph, which had undergone adaptive laboratory
+                evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO) as carbon
+                sources. This
+                allowed the construction of a KT2440 strain with high PBAT degradation capacity and the ability to grow
+                using its
+                degradation products.</h1>
+            <img src="./images/DNA.svg" id="dnapic" class="dnapic" id="dnaanime">
+
+
+        </div>
+
+    </div>
+
+    <!-- 波浪部分 -->
+    <div class="waves-container">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave"
+                    d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+                <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+                <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+            </g>
+        </svg>
+    </div>
+    </div>
+    <section class="footer">
+
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+                <img src="images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+                <img src="images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+                <img src="images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+                <img src="images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+                <img src="images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+                <img src="images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+                <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+                <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+                <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+                <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+                <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+                <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function handleScroll() {
+            const tags = document.querySelectorAll('.footer-tag');
+            tags.forEach(tag => {
+                if (isInViewport(tag)) {
+                    tag.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
 </body>
+<script src="./js/movement.js"></script>
+<script src="./js/position_log.js"></script>
+
 </html>
+<script>
+    window.onload = function () {
+        window.scrollTo(0, 0); // X 和 Y 坐标分别为 0
+    };
+</script>

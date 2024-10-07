@@ -1,0 +1,96 @@
+.footer-tag {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1.05);;
+}
+
+.footer-tag.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#tag1 {
+    transition-delay: 0.1s;
+}
+
+#tag2 {
+    transition-delay: 0.15s;
+}
+
+#tag3 {
+    transition-delay: 0.2s;
+}
+
+#tag4 {
+    transition-delay: 0.25s;
+}
+
+#tag5 {
+    transition-delay: 0.3s;
+}
+
+#tag6 {
+    transition-delay: 0.35s;
+}
+
+#tag7 {
+    transition-delay: 0.4s;
+}
+
+#tag8 {
+    transition-delay: 0.45s;
+}
+
+#tag9 {
+    transition-delay: 0.5s;
+}
+
+#tag10 {
+    transition-delay: 0.55s;
+}
+.footer {
+    background-color: #a4d1cc;
+    position: relative;
+    padding: 10px 30px 30px 30px;
+    z-index:66665;
+}
+
+.grid-wrapper {
+    display: grid;
+    /* 这一句用的是220px是因为有5列，四行文字220px，剩下的就正好剩四百左右px给logo使用 ，如果用250px的话，为logo剩下的空间不够大，会导致logo过小*/
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap: 2em;
+}
+
+.grid-logo {
+    display: grid;
+    /* background: #000; */
+    height: 400px;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.footlogo {
+    width: 100%;
+    
+}
+.logotag {
+    scale: 2;
+    position: relative;
+    top: -10px;
+}
+.grid-wrapper h1 {
+    font-size: 28px;
+    padding-bottom: 12px;
+}
+
+.grid-wrapper h1 a {
+    color: #35768a;
+    transition: 0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid-wrapper h1 a:hover {
+    color: #214753;
+}

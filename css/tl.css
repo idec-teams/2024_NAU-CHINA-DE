@@ -1,0 +1,42 @@
+.tzp img{
+
+    height: 600px;
+    
+}
+.tzp{
+    flex: 0.05;
+    padding-top: 40px;
+    }
+
+.navbar2 {
+    flex: 0.1;
+    padding-left: 0%;
+    padding-top: 0%;
+
+}
+.cv{
+    flex: 0.58;
+}
+
+.navbar2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar2 li {
+    margin-top: 37px;
+    
+}
+
+.navbar2 a {
+    text-decoration: none;
+    color: rgb(23, 98, 17);
+    font-size: 30px;
+    transition: font-size 0.5s ease-out;
+}
+.navbar2 a:hover{
+    font-size: 50px;
+    color: rgb(62, 175, 138);
+}
