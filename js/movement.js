@@ -107,7 +107,7 @@ window.addEventListener('scroll', function() {
     const lftBox2 = document.getElementById('lft2');
     const rgtBox2 = document.getElementById('rgt2');
     const MidBox = document.getElementById('mid0');
-    const TitBox = document.getElementById('title');
+    const TitBox = document.getElementById('titlep');
     const dnap = document.getElementById('dnapic');
 
     /////////////////////////////////////////header////////////////////////////////

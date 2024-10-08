@@ -87,6 +87,16 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     
 }
+
+.titlep{
+    left: 7.5%;
+    width:85%;
+    padding-top:200px;
+    position: fixed;
+    z-index: 5;
+    transition: all 0.5s ease;
+    
+}
 .t1{
     position: relative;
     top: 1200px;
