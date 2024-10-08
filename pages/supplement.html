@@ -1,0 +1,1893 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="Aspose.Words for .NET 17.1.0.0" />
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/tu.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/page_second_half.css">
+    <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../loading.gif" alt="Loading...">
+    </div>
+
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="../images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="../index.html" class="dropdown-a">
+                    <img src="../images/home1.svg" alt="" class="icon1">
+                    <img src="../images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a">
+                    <img src="../images/pro1.svg" alt="" class="icon3">
+                    <img src="../images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+
+                <a href="./notebook.html" class="dropdown-a">
+                    <img src="../images/lab1.svg" alt="" class="icon4">
+                    <img src="../images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./member.html" class="dropdown-a">
+                    <img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./member.html" class="dropdown-page cool-link2">Members</a>
+                    <a href="#" class="dropdown-page cool-link2">Contribution</a>
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+    <section class="description_container">
+        <p
+            style="margin-top:7.8pt; margin-bottom:7.8pt; text-align:center; line-height:200%; widows:0; orphans:0; font-size:26pt">
+            <span style="font-family:'Times New Roman'; font-weight:bold;">FIGURE</span>
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage1.png" width="566" height="483" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S1. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">The map of plasmids used for directed evolution
+                of </span><span style="font-family:'Times New Roman'; font-weight:bold">recombinant plasmids</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">. </span><span
+                style="font-family:'Times New Roman'">(A)</span><span style="font-family:'Times New Roman'">
+                pHCM12M-SPC-PETase </span><span style="font-family:'Times New Roman'">. This plasmid
+                contains</span><span style="font-family:'Times New Roman'"> the gene of </span><span
+                style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'">PETase</span><span
+                style="font-family:'Times New Roman'">.</span><span style="font-family:'Times New Roman'"> </span><span
+                style="font-family:'Times New Roman'">(B) pHCM12M-SPC-</span><span
+                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                style="font-family:'Times New Roman'">LipA</span><span style="font-family:'Times New Roman'">. The
+                plasmid contains </span><span style="font-family:'Times New Roman'">the gene of </span><span
+                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                style="font-family:'Times New Roman'">LipA. (C) pHCM12M-SPC-1028</span><span
+                style="font-family:'Times New Roman'">. The plasmid contain</span><span
+                style="font-family:'Times New Roman'">s the gene of Lipase1028.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:18pt"><br
+                style="page-break-before:always; clear:both" /></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage2.png" width="382" height="248" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S2. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">The map of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">pBBR1MCS-</span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">tph </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">plasmids </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">for KT2440 strain modification. </span><span
+                style="font-family:'Times New Roman'">This plasmid </span><span
+                style="font-family:'Times New Roman'">contains the </span><span
+                style="font-family:'Times New Roman'; font-style:italic">tph</span><span
+                style="font-family:'Times New Roman'"> clusters including</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff"> genes encoding the
+                transcriptional regulator (</span><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222; background-color:#ffffff">TphR</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">), TPA transporter
+                (</span><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222; background-color:#ffffff">TpaK</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">), TPA 1,</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff"> </span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">2-dioxygenase
+                (</span><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222; background-color:#ffffff">TphA</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">), and 1,</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff"> </span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">2-dihydroxy-3,</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff"> </span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">5-cyclohexadiene-1,</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff"> </span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">4-dicarboxylate
+                dehydrogenase (</span><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222; background-color:#ffffff">TphB</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">) from a TPA
+                degrading</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">&#xa0;</span><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222; background-color:#ffffff">P.
+                Stutzeri</span><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222; background-color:#ffffff">.</span>
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-style:italic; color:#222222">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage3.png" width="275" height="300" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S3.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">T</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">he DNA</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">bands of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase and </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Bs</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">LipA performing a</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">garose gel (1</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">%</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">)</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">electrophoresis (</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">120</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">V, </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">30</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">min)</span><span
+                style="font-family:'Times New Roman'">.</span><span style="font-family:'Times New Roman'"> </span><span
+                style="font-family:'Times New Roman'">The correct band length for </span><span
+                style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'">PETase is 789</span><span style="font-family:'Times New Roman'">
+            </span><span style="font-family:'Times New Roman'">bp and for </span><span
+                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                style="font-family:'Times New Roman'">LipA is 543</span><span style="font-family:'Times New Roman'">
+            </span><span style="font-family:'Times New Roman'">bp</span><span
+                style="font-family:'Times New Roman'">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage4.png" width="421" height="281" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S4. LB Petri dishes for
+                constructing</span><span style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">
+                Is</span><span style="font-family:'Times New Roman'; font-weight:bold">PETase and </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Bs</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">LipA libraries.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; color:#1f1f1f">Morphological changes of PBAT films after
+                degradation</span><span style="font-family:'Times New Roman'; color:#1f1f1f">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; color:#1f1f1f">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; color:#1f1f1f">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; color:#1f1f1f">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage5.png" width="407" height="215" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">Figure S5. PCR products generated by the overlap extension PCR.
+                The highlights in the gel tray is the POE-PCR product.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage6.png" width="334" height="341" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">Figure S6. Hydrolysis zones of ND within 24h.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage7.png" width="554" height="658" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">Figure S7. Morphological changes of PBAT films over different
+                degradation periods. After incubating for 5 days in LB liquid medium without inoculated bacteria, the
+                control group's PBAT remained intact, showing no significant changes. In the treatment group, PBAT films
+                exhibited increasing degradation rates, turning whiter in color and decreasing in ductility when
+                co-incubated with different strains. Films treated with IsPETase showed relatively minor changes, with a
+                slight reduction in overall film area and a few holes appearing on the surface. However, films treated
+                with BsLipA and ND strains underwent significant degradation over time, cracking into pieces, reducing
+                in area, and eventually degrading into almost powder form. Notably, the films treated with ND strain had
+                the highest degradation rate.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage8.png" width="531" height="297" alt=""
+                style="-aw-left-pos:-0.1pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:3.8pt; -aw-wrap-type:topbottom" /><br /><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S8. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">The </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">three-dimensional</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> structure of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">BABTaB</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage9.png" width="554" height="306" alt=""
+                style="-aw-left-pos:-0.1pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:23.45pt; -aw-wrap-type:topbottom" /><br />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S9. The three-dimensional structure of
+            </span><span style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:18pt"><img
+                src="../images/supplement/supplementpage10.png" width="553" height="319" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:3.1pt; -aw-wrap-type:topbottom" /><br /><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S10. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">The three-</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">dimensional </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">structure of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage11.png" width="554" height="308" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:23.65pt; -aw-wrap-type:topbottom" /><br />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; text-align:justify; line-height:200%; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S1</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">1</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">Number </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">H-bonds and SASA of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> and </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">mutant </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'">(</span><span style="font-family:'Times New Roman'">a</span><span
+                style="font-family:'Times New Roman'">)</span><span style="font-family:'Times New Roman'"> </span><span
+                style="font-family:'Times New Roman'">The number of hydrogen bonds during the protein-ligand complex
+                simulation process</span><span style="font-family:'Times New Roman'">;</span><span
+                style="font-family:'Times New Roman'">(</span><span style="font-family:'Times New Roman'">b</span><span
+                style="font-family:'Times New Roman'">)</span><span style="font-family:'Times New Roman'"> </span><span
+                style="font-family:'Times New Roman'">The SASA curve of the protein during the</span><span
+                style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'">protein-ligand
+                complex simulation process (The solvent accessible surface area (SASA) is calculated by the van der
+                Waals interaction between the solute and the solvent molecules. The SASA of the</span><span
+                style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'">protein
+                decreases as the protein density increases, so the change of SASA can predict the change of</span><span
+                style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'">protein
+                structure)</span><span style="font-family:'Times New Roman'">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; color:#1f1f1f"> </span><img
+                src="../images/supplement/supplementpage12.png" width="554" height="510" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">Figure S12. Molecular docking analysis of ND and IsPETase. (a)
+                Hydrogen bond interactions between the mutant ND and BABTaB. The green dashed lines represent hydrogen
+                bonds, with the numbers above representing the lengths of the hydrogen bonds; (b) Hydrogen bond
+                interactions between the IsPETase and BABTaB. The amino acid residues involved in hydrogen bond
+                interactions within the proteins are labeled and displayed in a stick model. The orange dashed lines
+                indicate hydrogen bonds, with the numbers above representing the lengths of the hydrogen bonds.</span>
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p
+            style="margin-top:7.8pt; margin-bottom:7.8pt; text-align:justify; line-height:200%; widows:0; orphans:0; font-size:18pt">
+            <img src="../images/supplement/supplementpage13.png" width="310" height="458" alt=""
+                style="-aw-left-pos:100.5pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:3.55pt; -aw-wrap-type:topbottom" /><br /><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S1</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">3</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">(a) The superimposed active site clefts of
+            </span><span style="font-family:'Times New Roman'; font-weight:bold">BABTaB</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">-bound complex of</span><span
+                style="font-family:'Times New Roman'"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase; (b) The superimposed active site clefts
+                of </span><span style="font-family:'Times New Roman'; font-weight:bold">BABTaB</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">-bound complex</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">of </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">;</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'">T</span><span style="font-family:'Times New Roman'">he
+                BABTaB-</span><span style="font-family:'Times New Roman'">bound</span><span
+                style="font-family:'Times New Roman'"> pocket is shown in a surface model and the BABTaB molecule is
+                shown as </span><span style="font-family:'Times New Roman'">a stick</span><span
+                style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">.</span>
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><br
+                style="page-break-before:always; clear:both" /></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; color:#222222">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><img
+                src="../images/supplement/supplementpage14.png" width="554" height="344" alt=""
+                style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline" />
+        </p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; text-align:justify; line-height:200%; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Figure S1</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">4</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">. Molecular dynamics trajectories of
+            </span><span style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> and </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> were analyzed.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> represents </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase and </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> represents mutant </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">(a) </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">The RMS</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">F</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> curve of the protein during the protein-ligand
+                complex simulation process</span><span style="font-family:'Times New Roman'"> (T</span><span
+                style="font-family:'Times New Roman'">he fluctuation of each atom relative to its average position is
+                calculated, which characterizes the average of the structural changes over time, and gives a
+                characterization of the flexibility of each region of the protein.</span><span
+                style="font-family:'Times New Roman'"> The RMSF of the ND-ligand complex has a large difference from
+                that of the </span><span style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'">PETase</span><span style="font-family:'Times New Roman'">-ligand
+                complex, indicating that the active region of the protein of the ND mutant shifted); </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">(b) </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">The Rg curve of the protein during the
+                protein-ligand complex simulation process</span><span style="font-family:'Times New Roman'">
+                (T</span><span style="font-family:'Times New Roman'">he radius of gyration (Rg) is used to prove the
+                compactness of the protein structure during the simulation process, it is the distance between the
+                centroid of all atoms and their ends at a specific time interval.</span><span
+                style="font-family:'Times New Roman'"> Throughout the complex MD simulation, the fluctuation of Rg value
+                of </span><span style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'">PETase</span><span style="font-family:'Times New Roman'"> is
+                larger than that of </span><span style="font-family:'Times New Roman'; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'">, indicating that </span><span
+                style="font-family:'Times New Roman'; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'">binds more
+                tightly to small molecules); </span><span style="font-family:'Times New Roman'; font-weight:bold">(c)
+            </span><span style="font-family:'Times New Roman'; font-weight:bold">The </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">RMSD </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">curve of the protein during the protein-ligand
+                complex simulation process</span><span style="font-family:'Times New Roman'; font-weight:bold">
+            </span><span style="font-family:'Times New Roman'">(T</span><span style="font-family:'Times New Roman'">he
+                complex reached equilibrium after 20 ns, indicating that the whole simulation process was stable and
+                reliable</span><span style="font-family:'Times New Roman'">. The RMSD of the </span><span
+                style="font-family:'Times New Roman'; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'"> composite system showed a small decrease compared to that of the
+            </span><span style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'">PETase</span><span style="font-family:'Times New Roman'">,
+                indicating that the stability of the </span><span
+                style="font-family:'Times New Roman'; font-style:italic">ND</span><span
+                style="font-family:'Times New Roman'"> composite system was higher than that of the </span><span
+                style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'">PETase</span><span
+                style="font-family:'Times New Roman'">)</span><span style="font-family:'Times New Roman'">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:18pt"><br
+                style="page-break-before:always; clear:both" /></p>
+        <p
+            style="margin-top:7.8pt; margin-bottom:7.8pt; text-align:center; line-height:200%; widows:0; orphans:0; font-size:18pt">
+            <span style="font-family:'Times New Roman'; font-weight:bold">TABLE</span>
+        </p>
+        <div>
+            <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt">
+                <span style="font-family:'Times New Roman'; font-weight:bold">Table. 1S The primers which were used in
+                    this
+                    study.</span></p>
+            <table cellspacing="0" cellpadding="0" style="width:100%; border-collapse:collapse">
+                <tr style="height:14pt">
+                    <td
+                        style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">Number</span></p>
+                    </td>
+                    <td
+                        style="width:30%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">Primer</span><span
+                                style="font-family:'Times New Roman'">s</span></p>
+                    </td>
+                    <td
+                        style="width:48.58%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">Nucleic acid sequences</span><span
+                                style="font-family:'Times New Roman'">(5'to3')</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA-R</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">CAGTGGTGGTGGTGGTGGTGATTCGTATTCTGTCCTCCgcc</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">2</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA-F</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">GCAACATGTCTGCGCAGGCTGCTGAGCATAATCCAGTTGTGAT</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">3</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">pHCM12M-SPC-F</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">GGCGGAGGACAGAATACGAATCACCACCACCACCACCACT</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">4</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">pHCM12M-SPC-R</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">CACAACTGGATTATGCTCAGCAGCCTGCGCAGACATGTTG</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">5</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA/</span><span
+                                style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                                style="font-family:'Times New Roman'">PETase-Test-F1</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">CCGGGACTCAGGAGCATTTAA</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">6</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA/</span><span
+                                style="font-family:'Times New Roman'; font-style:italic">Is</span><span
+                                style="font-family:'Times New Roman'">PETase-Test-R1</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">TCTAGTAGAGAGCGTTCACCGACA</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">7</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">16sRNA-F</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">AGAGTTTGATCCTGGCTCAG</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">8</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">16sRNA-R</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">TACGGTTACCTTGTTACGACTT</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">9</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">pHCM12M-PETase-R</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">GTCTTGAGGCGCGCGGAAAGTTAGCCTGCGCAGACATGTTG</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">10</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">pHCM12M-PETase-F</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">GCGATTTTAGAACAGCAAATTGCTCACACCACCACCACCACCACT</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">11</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA/PETase</span><span
+                                style="font-family:'Times New Roman'">-F</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">CGTTAACGTTAATCTTTACGATGGCGTTCAGCAACATGTCTGCGCAGGCT</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">12</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA/PETase</span><span
+                                style="font-family:'Times New Roman'">-R</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">TCCGAAGATTGACTATTCTCAGATAAAGTTCAGTGGTGGTGGTGGTGGTG</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">13</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">pHCM12M-</span><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA/PETase</span><span
+                                style="font-family:'Times New Roman'">-F</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">CACCACCACCACCACCACTGAACTTTATCT</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">14</span></p>
+                    </td>
+                    <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">pHCM12M-</span><span
+                                style="font-family:'Times New Roman'; font-style:italic">Bs</span><span
+                                style="font-family:'Times New Roman'">lipA/PETase</span><span
+                                style="font-family:'Times New Roman'">-R</span></p>
+                    </td>
+                    <td style="width:30% !important; padding-right:0pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">AGCCTGCGCAGACATGTTGCTGAACGCCA</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">15</span></p>
+                    </td>
+                    <td style="width:157pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1028-M-F1</span></p>
+                    </td>
+                    <td style="width:196.25pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">GTCCACGGTTATGGAGGGAATGATT</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">16</span></p>
+                    </td>
+                    <td style="width:157pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1028-M-R1</span></p>
+                    </td>
+                    <td style="width:196.25pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">AATCATTCCCTCCATAACCGTGGAC</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">17</span></p>
+                    </td>
+                    <td
+                        style="width:157pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1028-M-F2</span></p>
+                    </td>
+                    <td
+                        style="width:196.25pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">GAATGATTATAACTTCATCTCCCTTATG</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:5%; border-top-style:solid; border-top-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">18</span></p>
+                    </td>
+                    <td
+                        style="width:157pt; border-top-style:solid; border-top-width:0.75pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1028-M-R2</span></p>
+                    </td>
+                    <td
+                        style="width:196.25pt; border-top-style:solid; border-top-width:0.75pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">CATAAGGGAGATGAAGTTATAATCATTCCC</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">19</span></p>
+                    </td>
+                    <td style="width:157pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1028-M-F3</span></p>
+                    </td>
+                    <td style="width:196.25pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">AAGGAACGTATAGCGCAGTT</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">20</span></p>
+                    </td>
+                    <td style="width:157pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">1028-M-R3</span></p>
+                    </td>
+                    <td style="width:196.25pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">AACTGCGCTATACGTTCCTT</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">21</span></p>
+                    </td>
+                    <td style="width:157pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">PETase-M-F1</span></p>
+                    </td>
+                    <td style="width:196.25pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">TTCCGGGATATAACTCGAGACAGTCATCAATTA</span></p>
+                    </td>
+                </tr>
+                <tr style="height:14pt">
+                    <td
+                        style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">22</span></p>
+                    </td>
+                    <td
+                        style="width:157pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">PETase-M-R1</span></p>
+                    </td>
+                    <td
+                        style="width:196.25pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:bottom">
+                        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                                style="font-family:'Times New Roman'">TAATTGATGACTGTCTCGAGTTATATCCCGGAA</span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><br
+                style="page-break-before:always; clear:both" /></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Table S2. </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Bs</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">LipA</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold">(50</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">μl</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">) (Concentration system not using the (StarMut)
+                error-prone PCR kit)</span></p>
+        <table cellspacing="0" cellpadding="0" style="width:88.78%; border-collapse:collapse">
+            <tr style="height:14pt">
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Reaction system</span><span
+                            style="font-family:'Times New Roman'">(</span><span
+                            style="font-family:'Times New Roman'">μl</span><span
+                            style="font-family:'Times New Roman'">)</span></p>
+                </td>
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">3</span></p>
+                </td>
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">4</span></p>
+                </td>
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">5</span></p>
+                </td>
+            </tr>
+            <tr style="height:18.5pt">
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2×</span><span
+                            style="font-family:'Times New Roman'">Rapid Taq Master Mix</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'"> </span><span
+                            style="font-family:'Times New Roman'">T</span><span
+                            style="font-family:'Times New Roman'">emplate</span><span
+                            style="font-family:'Times New Roman'"> </span><span
+                            style="font-family:'Times New Roman'">DNA</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Primer 1(10 µM)</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Primer 2(10 µM)</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">MgCl</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">MnCl</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:2%; padding-right:0pt;text-align: center; vertical-align:middle ;padding-left:0pt;">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+            </tr>
+            <tr style="height:16pt">
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">H</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span><span
+                            style="font-family:'Times New Roman'">O</span></p>
+                </td>
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">18.5</span></p>
+                </td>
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">18</span></p>
+                </td>
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17</span></p>
+                </td>
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17.5</span></p>
+                </td>
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17</span></p>
+                </td>
+            </tr>
+        </table>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Table S3.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold"> </span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase(</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">50</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">μl</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">)</span></p>
+        <table cellspacing="0" cellpadding="0" style="width:100.3%; border-collapse:collapse">
+            <tr style="height:14pt">
+                <td
+                    style="width:31.34%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Reaction system</span><span
+                            style="font-family:'Times New Roman'">(</span><span
+                            style="font-family:'Times New Roman'">μl</span><span
+                            style="font-family:'Times New Roman'">)</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">3</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">4</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">6</span></p>
+                </td>
+                <td
+                    style="width:5%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">8</span></p>
+                </td>
+                <td
+                    style="width:9.84%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">10</span></p>
+                </td>
+            </tr>
+            <tr style="height:18.5pt">
+                <td style="width:31.34%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2×</span><span
+                            style="font-family:'Times New Roman'">Rapid Taq Master Mix</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:5%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:9.84%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:31.34%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'"> </span><span
+                            style="font-family:'Times New Roman'">T</span><span
+                            style="font-family:'Times New Roman'">emplate</span><span
+                            style="font-family:'Times New Roman'"> </span><span
+                            style="font-family:'Times New Roman'">DNA</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:5%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:9.84%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:31.34%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Primer 1(10 µM)</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:5%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.84%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:31.34%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Primer 2(10 µM)</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width: 5%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.84%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:16pt">
+                <td style="width:31.34%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Enhancer</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">3</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">4</span></p>
+                </td>
+                <td style="width:9.78%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">6</span></p>
+                </td>
+                <td style="width:5%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">8</span></p>
+                </td>
+                <td style="width:9.84%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">10</span></p>
+                </td>
+            </tr>
+            <tr style="height:16pt">
+                <td
+                    style="width:31.34%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">H</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span><span
+                            style="font-family:'Times New Roman'">O</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">20</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">18</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">16</span></p>
+                </td>
+                <td
+                    style="width:9.78%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">14</span></p>
+                </td>
+                <td
+                    style="width:5%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">12</span></p>
+                </td>
+                <td
+                    style="width:9.84%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">10</span></p>
+                </td>
+            </tr>
+        </table>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">&#xa0;</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Table S4.</span><span
+                style="font-family:'Times New Roman'; font-weight:bold; font-style:italic">Is</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">PETase(</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">50</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">μl</span><span
+                style="font-family:'Times New Roman'; font-weight:bold">)</span></p>
+        <table cellspacing="0" cellpadding="0" style="width:100.24%; border-collapse:collapse">
+            <tr style="height:14pt">
+                <td
+                    style="width:31.72%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Reaction system</span><span
+                            style="font-family:'Times New Roman'">(</span><span
+                            style="font-family:'Times New Roman'">μl</span><span
+                            style="font-family:'Times New Roman'">)</span></p>
+                </td>
+                <td
+                    style="width:11.36%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td
+                    style="width:11.36%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td
+                    style="width:11.36%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">3</span></p>
+                </td>
+                <td
+                    style="width:30%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">4</span></p>
+                </td>
+                <td
+                    style="width:30%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">5</span></p>
+                </td>
+                <td
+                    style="width:11.4%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">6</span></p>
+                </td>
+            </tr>
+            <tr style="height:18.5pt">
+                <td style="width:31.72%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2×</span><span
+                            style="font-family:'Times New Roman'">Rapid Taq Master Mix</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+                <td style="width:11.4%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">25</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:31.72%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'"> </span><span
+                            style="font-family:'Times New Roman'">T</span><span
+                            style="font-family:'Times New Roman'">emplate</span><span
+                            style="font-family:'Times New Roman'"> </span><span
+                            style="font-family:'Times New Roman'">DNA</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.4%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:31.72%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Primer 1(10 µM)</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.4%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:31.72%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Primer 2(10 µM)</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.4%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:16pt">
+                <td style="width:31.72%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">MgCl</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">0.5</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.4%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:16pt">
+                <td style="width:31.72%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">MnCl</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:11.36%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">1</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:30%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+                <td style="width:11.4%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">2</span></p>
+                </td>
+            </tr>
+            <tr style="height:16pt">
+                <td
+                    style="width:31.72%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">H</span><span
+                            style="font-family:'Times New Roman'; font-size:9.33pt; vertical-align:sub">2</span><span
+                            style="font-family:'Times New Roman'">O</span></p>
+                </td>
+                <td
+                    style="width:11.36%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">18.5</span></p>
+                </td>
+                <td
+                    style="width:11.36%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">18</span></p>
+                </td>
+                <td
+                    style="width:11.36%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17</span></p>
+                </td>
+                <td
+                    style="width:30%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17.5</span></p>
+                </td>
+                <td
+                    style="width:30%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">17</span></p>
+                </td>
+                <td
+                    style="width:11.4%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">16</span></p>
+                </td>
+            </tr>
+        </table>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'; font-weight:bold">Table S5. Strains which were used in this study.
+            </span></p>
+        <table cellspacing="0" cellpadding="0" style="width:100.34%; border-collapse:collapse">
+            <tr style="height:14pt">
+                <td
+                    style="width:15.16%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Names</span></p>
+                </td>
+                <td
+                    style="width:55.42%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'; letter-spacing:0.4pt; background-color:#ffffff">Relevant
+                            characteristic</span></p>
+                </td>
+                <td
+                    style="width:29.42%; border-top-style:solid; border-top-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'; letter-spacing:0.4pt; background-color:#ffffff">Source</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:18.5pt">
+                <td style="width:15.16%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">SCK6</span></p>
+                </td>
+                <td style="width:55.42%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Em his nprE18 aprE3 eglSΔ102 bglT/bglS EV
+                            lacA::PxylA-comKv</span></p>
+                </td>
+                <td style="width:29.42%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">YanXin Laboratory, Nanjing Agricultural
+                            University</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td style="width:15.16%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">KT2440</span></p>
+                </td>
+                <td style="width:55.42%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">-</span></p>
+                </td>
+                <td style="width:29.42%; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">YanXin Laboratory, Nanjing Agricultural
+                            University</span></p>
+                </td>
+            </tr>
+            <tr style="height:14pt">
+                <td
+                    style="width:15.16%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">DH5α</span></p>
+                </td>
+                <td
+                    style="width:55.42%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">deoR endA1 gyrA96 hsdR17 (rk-mk+)recA1 relA1 supE44
+                            thi- 1 Δ(lacZYA-argF)U169 Φ80lacZ ΔM15F - λ -</span></p>
+                </td>
+                <td
+                    style="width:29.42%; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:3pt; vertical-align:middle">
+                    <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; font-size:14pt"><span
+                            style="font-family:'Times New Roman'">Vazyme</span></p>
+                </td>
+            </tr>
+        </table>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">SCK6 Accession Number: The ultra-competent </span><span
+                style="font-family:'Times New Roman'; font-style:italic">Bacillus subtilis</span><span
+                style="font-family:'Times New Roman'"> strain SCK6 can be obtained from the Bacillus Genetic Stock
+                Center (http://www.bgsc.org), with the accession number 1A976; KT2440 Accession Number: txid160488;
+                pBBR-</span><span style="font-family:'Times New Roman'; font-style:italic">tph</span><span
+                style="font-family:'Times New Roman'"> Accession Number: txid101510</span><span
+                style="font-family:'Times New Roman'">.</span></p>
+        <p style="margin-top:7.8pt; margin-bottom:7.8pt; line-height:200%; widows:0; orphans:0; font-size:18pt"><span
+                style="font-family:'Times New Roman'">&#xa0;</span></p>
+
+
+
+        <div class="title">Table S6. Sequences which were used in this study.</div>
+
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Nucleic acid sequences (5' to 3')</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>The signal peptide sequence for <br>extracellular expression in Bacillus subtilis</td>
+                <td>ATGAGAAGTAAAAAATTGTGGATAAGT<br>TTGTGTTTGCGTTAACGTTAATCTTTAC<br>GATGGCGTTCAGCAACATGTCTGCGCAG<br>GCT
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The signal peptide sequence for expression in KT2440</td>
+                <td>ATGAAATACCTGCTGCCGACCCTGCTG<br>CTGGTCTGCTCCTCCTCGCTGCCCAGCC<br>GGCGATGGCC</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>BsLipA</td>
+                <td>GCTGAGCATAATCCAGTTGTGATGGTG<br>CACGGCATTGGTGGTGCCTCTTATAACT<br>TTTTTTCTATTAAAAATTACTTGATTGG<br>ACAAGGCTGGGATCGAAACCAATTATAT<br>GCTATTGATTTCATAGACAAAACAGGAA<br>ATAACCGCAACAATGGTCCGCGTCTATC<br>GAGATTCGTCAAAGATGTGTTAGACAAA<br>ACGGGTGCCAAAAAAGTAGATATTGTGG<br>CTCATAGTATGGGCGGGGCGAACACGCT<br>ATATTATATTAAGAATCTAGATGGCGGC<br>GATAAAATTGAGAACGTTGTCACAATTG<br>GTGGAGCAAACGGACTCGTTTCAAGCAG<br>AGCATTACCAGGCACAGATCCAAATCAA<br>AAAATTCTTTACACATCCGTCTATAGCT<br>CAGCAGATCTTATTGTCGTCAACAGCCT<br>CTCTCGTTTAATTGGCGCAAGAAACATC<br>CTGATCCATGGCGTTGGCCATATCGGTC<br>TATTAACCTCAAGCCAAGTGAAAGGGTAT<br>ATTAAAGAAGGACTGAACGGCGGAGGAC<br>AGAATACGAAT
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>IsPETase</td>
+                <td>CAAACGAACCCGTATGCGAGAGGCCCTA<br>AATCCGACAGCCGCATCTCTTGAAGCAT<br>CAGCAGGCCCGTTTACAGTTCGTTCTTT<br>TACAGTTTCAAGACCGTCAGGATATGGA<br>GCAGGAACAGTTTATTATCCGACAAATG<br>CAGGCGGCACAGTTGGAGCAATTGCTAT<br>TGTTCCGGGATATACAGCGAGACAGTCA<br>TCAATTAAATGGTGGGGACCGAGATTGG<br>CAAGCCATGGATTTGTTGTTATTACAAT<br>TGATACGAACAGCACACTGGATCAACCG<br>TCATCAAGATCTTCACAACAAATGGCAG<br>CACTTCGTCAGGTTGCAAGCCTGAACGG<br>CACGTCATCATCACCGATTTATGGCAAA<br>GTTGATACAGCAAGAATGGGCGTCATGG<br>GCTGGTCAATGGGCGGAGGAGGATCACT<br>GATTTCAGCAGCAAATAATCCGTCACTT<br>AAAGCAGCAGCGCCGCAAGCACCGTGGA<br>TTCATCAACGAATTTTTCATCAGTTACA<br>GTTCCGACGCTGATCTTTGCATGCGAAA<br>ACGATAGCATTGCACCGGTGAACAGCAG<br>CGCCCTGCCTATTTATGATTCAATGTCA<br>AGAAATGCGAAACAATTTCTGGAAATTA<br>ACGGCGGCTCACATTCTTGCGCAAATAG<br>CGGAAATTCAAATCAGGCACTTATTGGC<br>AAGAAGGGCGTTGCATGGATGAAAAGAT<br>TTATGGATAATGATACGCGCTATAGCAC<br>ATTTGCATGTGAAAATCCTAATAGCACG<br>AGAGTGAGCGATTTTAGAACAGCAAATT<br>GCTCA
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ND</td>
+                <td>GCTAACCCTTATGAAAGAGGACCTAACC<br>CTACAGATGCATTACTGGAAGCTCGCAG<br>CGGACCTTTTTCAGTTTCAGAAGAGAAT<br>GTGTCTAGACTTAGCGCTAGCGGATTTG<br>GAGGCGGAACAATCTACTATCCTAGAGA<br>AAACAATACGTACGGAGCAGTGGCAATT<br>TCTCCTGGATATACGGGAACAGAAGCTA<br>GCATTGCATGGCTTGGCGAACGCATTGC<br>CTCTCACGGATTTGTTGTCATTACAATT<br>GATACAATTACGACACTTGATCAACCGG<br>ACTCTAGAGCCGAACAGTTAAATGCTGC<br>ATTAAACCATATGATTAACAGAGCCTCA<br>TCTACAGTGAGATCAAGAATCGATTCAT<br>CTAGATTAGCAGTCATGGGACATAGCAT<br>GGGAGGAGGAGGCTCTCTTCGCTTAGCT<br>TCACAAAGACCGGACCTGAAAGCAGCAA<br>TTCCTTTAACGCCGTGGCATCTGAACAA<br>AACTGGAGCTCAGTGACAGTTCCGACGT<br>TAATCATTGGCGCTGATTTAGATACAAT<br>TGCCCCGGTCGCAACATCTGCCAAGCCT<br>ATCTATAACTCTTTACCTAGCAGCATTA<br>GCAAGGCATATCTTGAATTAGATGGAGC<br>CACACATTTTGCGCCGAACATTCCTAACA<br>AGATCATTGGCAAATATTCAGTAGCTTG<br>GCTTAAGAGATTCGTCGACAATGACACA<br>CGCTATACACAATTTCTTTGTCCGGGAC<br>CGAGAGATGGATTATTTGGCGAAGTTGA<br>AGAATACAGATCAACATGTCCTTTT
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>The result of fragment sequencing under the error-prone PCR system added 0 μL StarMut Enhancer</td>
+                <td>CAAACGAACCCGTATGCGAGAGGCCCTA<br>AATCCGACAGCCGCATCTCTTGAAGCAT<br>CAGCAGGCCCGTTTACAGTTCGTTCTTT<br>TACAGTTTCAAGACCGTCAGGATATGGA<br>GCAGGAACAGTTTATTATCCGACAAATG<br>CAGGCGGCACAGTTGGAGCAATTGCTAT<br>TGTTCCGGGATATACAGCGAGACAGTCA<br>TCAATTAAATGGTGGGGACCGAGATTGG<br>CAAGCCATGGATTTGTTGTTATTACAAT<br>TGATACGAACAGCACACTGGATCAACCG<br>TCATCAAGATCTTCACAACAAATGGCAG<br>CACTTCGTCAGGTTGCAAGCCTGAACGG<br>CACGTCATCATCACCGATTTATGGCAAA<br>GTTGATACAGCAAGAATGGGCGTCATGG<br>GCTGGTCAATGGGCGGAGGAGGATCACT<br>GATTTCAGCAGCAAATAATCCGTCACTT<br>AAAGCAGCAGCGCCGCAAGCACCGTGGA<br>TTCATCAACGAATTTTTCATCAGTTACA<br>GTTCCGACGCTGATCTTTGCATGCGAAA<br>ACGATAGCATTGCACCGGTGAACAGCAG<br>CGCCCTGCCTATTTATGATTCAATGTCA<br>AGAAATGCGAAACAATTTCTGGAAATTA<br>ACGGCGGCTCACATTCTTGCGCAAATAG<br>CGGAAATTCAAATCAGGCACTTATTGGC<br>AAGAAGGGCGTTGCATGGATGAAAAGAT<br>TTATGGATAATGATACGCGCTATAGCAC<br>ATTTGCATGTGAAAATCCTAATAGCACG<br>AGAGTGAGCGATTTTAGAACAGCAAATT<br>GCTCA
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>The result of fragment sequencing under the error-prone PCR system added 4 μL StarMut Enhancer</td>
+                <td>GATCACTGATTTGACGACGAAATAATCC<br>GTCACTTAAAGCAGCAGCGCCGAAGC<br>ACCGTGGGATTCATCAACGAATTTTCA<br>TCAGTTACAGTTCCGAGCGTACTTTG<br>CATGCGAACGGAACGATAGCATGCGC<br>TGAACAGCAGCGCCGGCCTTATTATG<br>TCAATGTCAAGAAATGGCGCGAACAA<br>TTCTGGAAATTAACGCGGCGCTCAATTCT<br>TGCAGCAATAGCGGAAATTCAATCAG<br>GCACTTATTGGCAAGAAGGGCGTTGCA<br>TGGATGAAAAGATTTATGGATAATGATG<br>CGGCTATAGCACATTTGCATGTGAAAA<br>TCCCTAATAGCACGAGAGTGAGCGATT<br>AGAACAGCAAAATTGTCTCA
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>The result of fragment sequencing under the error-prone PCR system added 6 μL StarMut Enhancer</td>
+                <td>CAAACGAACCCGTATGCGAGAGGCCCT<br>AATCCGACAGCCGCATCTCTTGAAGCA<br>TCAGCAGGCCCGTTACAGTTCGTTCTTT<br>TTACAGTTTCAAGACCGTCAGGATATGG<br>AGCAGGAACAGTTTATTATCCGACAAAT<br>GCAGGCGGCACAGTTGGAGCAATTGCT<br>ATTGTTCCGGGATATACAGCGAGACAGT<br>CATCAATTAAATGGTGGTGGGACCGAGA<br>TTGGCAAGCCATGGATTTGTTGTTATTAC<br>ATTGATACGAACAGCACACTGGATCAAC<br>CGTCATCAAGATCTTCACAACAAATGG<br>CACTTCGTCAGGTTGCAAGCCTGAACG<br>CACGTCATCATCACCGATTTATGGCAAA<br>GTTGATACAGCAAGAATGGGCGTCATGG<br>GCTGGTCAATGGGCGGAGGAGGATCACT<br>GATTTCAGCAGCAAATAATCCGTCACTT<br>AAAGCAGCAGCGCCGCAAGCACCGTGG<br>ATTCATCAACGAATTTTTCATCAGTTAC<br>GTTCCGACGCTGATCTTTGCATGCGAAA<br>ACGATAGCATTGCACCGGTGAACAGCAG<br>CGCCCTGCCTATTTATGATTCAATGTCA<br>AGAAATGCGAAACAATTTCTGGAAATTA<br>ACGGCGGCTCACATTCTTGCGCAAATAG<br>CGGAAATTCAAATCAGGCACTTATTGGC<br>AAGAAGGGCGTTGCATGGATGAAAAGAT<br>TTATGGATAATGATACGCGCTATAGCAC<br>ATTTGCATGTGAAAATCCTAATAGCACG<br>AGAGTGAGCGATTTTAGAACAGCAAATT<br>GCTCA
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>The result of fragment sequencing under the error-prone PCR system added 8 μL StarMut Enhancer</td>
+                <td>CAAACGAACCCGTATGCGAGAGGCCCT<br>AATCCGACAGCCGCATCTCTTGAAGCA<br>TCAGCAGGCCCGTTACAGTTCGTTCTTT<br>TTACAGTTTCAAGACCGTCAGGATATGG<br>AGCAGGAACAGTTTATTATCCGACAAAT<br>GCAGGCGGCACAGTTGGAGCAATTGCT<br>ATTGTTCCGGGATATACAGCGAGACAGT<br>CATCAATTAAATGGTGGTGGGACCGAGA<br>TTGGCAAGCCATGGATTTGTTGTTATTAC<br>ATTGATACGAACAGCACACTGGATCAAC<br>CGTCATCAAGATCTTCACAACAAATGG<br>CACTTCGTCAGGTTGCAAGCCTGAACG<br>CACGTCATCATCACCGATTTATGGCAAA<br>GTTGATACAGCAAGAATGGGCGTCATGG<br>GCTGGTCAATGGGCGGAGGAGGATCACT<br>GATTTCAGCAGCAAATAATCCGTCACTT<br>AAAGCAGCAGCGCCGCAAGCACCGTGG<br>ATTCATCAACGAATTTTTCATCAGTTAC<br>GTTCCGACGCTGATCTTTGCATGCGAAA<br>ACGATAGCATTGCACCGGTGAACAGCAG<br>CGCCCTGCCTATTTATGATTCAATGTCA<br>AGAAATGCGAAACAATTTCTGGAAATTA<br>ACGGCGGCTCACATTCTTGCGCAAATAG<br>CGGAAATTCAAATCAGGCACTTATTGGC<br>AAGAAGGGCGTTGCATGGATGAAAAGAT<br>TTATGGATAATGATACGCGCTATAGCAC<br>ATTTGCATGTGAAAATCCTAATAGCACG<br>AGAGTGAGCGATTTTAGAACAGCAAATT<br>GCTCA
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>The result of fragment sequencing under the error-prone PCR system added 10 μL StarMut Enhancer</td>
+                <td>TCTGCTGCTTAGGAGATTTTCAGATGCA<br>AATGTGCTATAGGCGCGTATCATTATCC<br>AAATCTTTTCATCCATGACCAGCGCCTT<br>TTGGCAAATAGTGCGCGATGGAATTTGC<br>CGCTATTTGCCGAAGATTTGCTGGTCAA<br>CGTTAATTCCGAAGATTGTGTGTGAGGG<br>CTGACATTGAATCATAAATAGGGCAGGG<br>CGGCTGTGTTTCACCGGTGCAATGCTAT<br>CGTTTTCGCATGCAAAGATCAGGCTGGA<br>ACTGTAACCTGATGAAAATGTGCTGGTG<br>ATGAATCCCGGGTCGTTGGGGCTGGTGA<br>CTGCTTAAGTGACCGGATTATTTGCTGC<br>TGAACTAGTGATCCCTCCTCCGCATTTC<br>GACCAGCCCAGGACGCCCATCTGCTGCA<br>GTATCACGTTGCAATAAGGCTGGTGATG<br>ATGAGTCCGTTGCTAGGTTGGCAGTGCA<br>GACGAAGTGCCTCATTGTTGTGTCGAAA<br>ATCTTGATGACGGTGTCAGTTGGTGTCT<br>GTTGTGATCAATTGTAATAACAACAAAT<br>CCATGGCCTGCCAATCTGCGGCTCCACC<br>ATTTAGTGATGACTGCTGCTTGTCCAAT<br>CCCGAACCAATAGCAATTGCTCCGAACT<br>GTGCCGCTCGCATTGTGCGATAAACTGA<br>CTGTTCGTGCTCCATATCCTGGACGTCT<br>TGAACTGTAAAAGAACTGGTGACGTAAA<br>CGGGCTGTGATGATGGCTGAGGATGACG<br>GGGTTCGGTGGTGATGGTGCTGGTGGCG
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>The result of fragment sequencing under the error-prone PCR system added 0.5 μL Mg<sup>2+</sup> and
+                    1 μL
+                    Mn<sup>2+</sup> (without using StarMut Error-Prone PCR Kit)</td>
+                <td>CTAACTGCCATCAGGCGCGCCTAAAA<br>CAAACGAACCCGTATGCGAGAGGCCCT<br>AATCCGACAGCCGCATCTCTTGAAGCA<br>TCTGCAGGCCCGTTACAGTTCGTTCTCT<br>TTACAGTTTCAAGACCGTCAGGATATGG<br>AGCAGGAACAGTTTATTATCCGACAAAT<br>GTAGGCGGCACAGTTGGAGCAATTGCT<br>ATTGTTCCGGGATATACAGCGAGACAGT<br>CATCAATTAAATGGTGGTGGGACCGAGA<br>TTGGCAAGCCATGGATTTGTTGTTATTAC<br>ATTGATACGAACAGCACACTGGATCAAC<br>CGTCATCAAGATCTTCACAACAAATGG<br>CACTTCGTCAGGTTGCAAGCCTGAACG<br>CACGTCATCATCACCGATTTATGGCAAA<br>GTTGATACAGCAAGAATGGGCGTCATGG<br>GCTGGTCAATGGGCGGAGGAGGATCACT<br>GATTTCAGCAGCAAATAATCCGTCACTT<br>AAAGCAGCAGCGCCGCAAGCACCGTGG<br>ATTCATCAACGAATTTTTCATCAGTTAC<br>GTTCCGACGCTGATCTTTGCATGCGAAA<br>ACGATAGCATTGCACCGGTGAACAGCAG<br>CGCCCTGCCTATTTATGATTCAATGTCA<br>AGAAATGCGAAACAATTTCTGGAAATTA<br>ACGGCGGCTCACATTCTTGCGCAAATAG<br>CGGAAATTCAAATCAGGCACTTATTGGC<br>AAGAAGGGCGTTGCATGGATGAAAAGAT<br>TTATGGATAATGATACGCGCTATAGCAC<br>ATTTGCATGTGAAAATCCTAATAGCACG<br>AGAGTGAGCGATTTTAGAACAGCAAATT<br>GCTCA
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>The amino acid sequence of <i>IsPETase</i></td>
+                <td>
+                    MNFPRASRLMQAAVLGGLMAVSAAATA<br>
+                    QTNPYARGPNPTAASLEASAGPFTVRSFT<br>
+                    VSRPSGYGAGTVVYPTNAGGTVGAIAIV<br>
+                    PGYTARQSSIKWWGPRLASGHFVVITIDT<br>
+                    NSTLDQPSSRSSQQMAALRQVASLNGTS<br>
+                    SSPJYGKVDTARMGVMGWMSGGGGSLLI<br>
+                    SAANNPSLKAAAPQAPWDSSNTFSSVTV<br>
+                    PTLIFACENDSIAPVNSSALPIYDSMSRNA<br>
+                    KQFLEINGGSHSCANSGNSNQALIGKKG<br>
+                    VAWMKRFMDNDTRYSTFACENPNSTRVS<br>
+                    DFRTANCS
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>The amino acid sequence of <i>Tf</i>Cut</td>
+                <td>
+                    MNFPRASRLMQAAVLGGLMAVSAAATA<br>
+                    QTNPYARGPNPTAASLEASAGPFTVRSFT<br>
+                    VSRPSGYGAGTVVYPTNAGGTVGAIAIV<br>
+                    PGYTARQSSIKWWGPRLASGHFVVITIDT<br>
+                    NSTLDQPSSRSSQQMAALRQVASLNGTS<br>
+                    SSPJYGKVDTARMGVMGWMSGGGGSLLI<br>
+                    SAANNPSLKAAAPQAPWDSSNTFSSVTV<br>
+                    PTLIFACENDSIAPVNSSALPIYDSMSRNA<br>
+                    KQFLEINGGSHSCANSGNSNQALIGKKG<br>
+                    VAWMKRFMDNDTRYSTFACENPNSTRVS<br>
+                    DFRTANCS
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>The amino acid sequence of <i>ND</i></td>
+                <td>
+                    ANPYERGPNPTDALLEARSGPFVSEEN<br>
+                    VSRLSASGFGGGTIYYPRENNTYGAVAIS<br>
+                    PGYTGEASIAWLGERIASGHFVVITIDTI<br>
+                    TTLDQPDRAEQLNAALNHMINRASSTTV<br>
+                    RSRIDSSRRLAVMGHSMGGGGGSLRLASQR<br>
+                    PDLKAAIPLTPWHLNKNWSSSVTVPTLIIG<br>
+                    ADLDTIAPVATSIAKPIYNSSLPSSISKAYLE<br>
+                    LDGATHFAPNIPNKIIGKYSVAWLKRFVD<br>
+                    NDTRYTQFLCPGPRDGFLGVEEEYRSRTC<br>
+                    PF
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>
