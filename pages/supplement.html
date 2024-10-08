@@ -50,7 +50,7 @@
             </li>
 
             <li class="dropdown-menu">
-                <a href="#" class="dropdown-a">
+                <a href="./description.html" class="dropdown-a">
                     <img src="../images/pro1.svg" alt="" class="icon3">
                     <img src="../images/pro2.svg" alt="" class="icon_pro3">
                     Project
@@ -62,13 +62,13 @@
                     <a href="./design.html" class="dropdown-page cool-link2">
                         Design
                     </a>
-                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                    <a href="./results.html" class="dropdown-page cool-link2">
                         Results
                     </a>
-                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                    <a href="./supplement.html" class="dropdown-page cool-link2" target="_blank">
                         Supplement
                     </a>
-                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                    <a href="./Pro.html" class="dropdown-page cool-link2" target="_blank">
                         Protocol
                     </a>
                 </div>
@@ -135,7 +135,7 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
         });
     </script>
-    <img src="./header/supplement.png" alt="" style="width: 100%;">
+    <img src="./header/supplement.png" alt="" style="width: 100%;padding-top:80px">
     <section class="description_container">
         <p
             style="margin-top:7.8pt; margin-bottom:7.8pt; text-align:center; line-height:200%; widows:0; orphans:0; font-size:26pt">
@@ -1889,6 +1889,92 @@
             </tr>
         </table>
     </section>
+    <script>
+        document.querySelectorAll('.table_of_content a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offset = 100;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <div class="waves-container">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave"
+                    d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+                <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+                <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+            </g>
+        </svg>
+    </div>
+    </div>
+    <section class="footer">
+
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+                <img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+                <img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+                <img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+                <img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+                <img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+                <img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1 class="footer-tag" id="tag1"><a href="../index.html">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1 class="footer-tag" id="tag2"><a href="./description.html">Project</a></h1>
+                <h1 class="footer-tag" id="tag3"><a href="./description.html">Description</a></h1>
+                <h1 class="footer-tag" id="tag4"><a href="./design.html">Design</a></h1>
+                <h1 class="footer-tag" id="tag5"><a href="./results.html">Results</a></h1>
+                <h1 class="footer-tag" id="tag6"><a href="./supplement.html">Supplement</a></h1>
+                <h1 class="footer-tag" id="tag7"><a href="./Pro.html">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1 class="footer-tag" id="tag8"><a href="./notebook.html">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1 class="footer-tag" id="tag9"><a href="./member.html">Team</a></h1>
+                <h1 class="footer-tag" id="tag10"><a href="./collaboration.html">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function handleScroll() {
+            const tags = document.querySelectorAll('.footer-tag');
+            tags.forEach(tag => {
+                if (isInViewport(tag)) {
+                    tag.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
 </body>
 
 </html>

@@ -160,6 +160,7 @@ window.addEventListener('scroll', function() {
           } else {
             // 如果滚动回到上方，物件恢复原位
             MidBox.style.opacity=1;
+            
           }
         if (scrollPosition >250) {
             // 滚动到目标位置后，移动物件
@@ -167,6 +168,16 @@ window.addEventListener('scroll', function() {
           } else {
             // 如果滚动回到上方，物件恢复原位
             TitBox.style.opacity=1;
+            
+          }
+        if (scrollPosition >260) {
+            // 滚动到目标位置后，移动物件
+            TitBox.style.zIndex=-1; // 使用translate移动到新位置
+          } else {
+            // 如果滚动回到上方，物件恢复原位
+            TitBox.style.opacity=1;
+            TitBox.style.zIndex=6;
+            
           }
  
       
