@@ -130,6 +130,44 @@
         var current = $("li:nth-of-type(3) a").position();
         $("#nav .slide1").css({ left: +current.left, width: currentWidth });
     </script>
+
+    <script>
+        const icon1 = document.getElementById('icon1');
+            const icon3 = document.getElementById('icon3');
+            const icon4 = document.getElementById('icon4');
+            const gif_image = document.getElementById('gif-image');
+        const navbar0 = document.getElementById('navbar');
+        let isHovering = false;
+
+        function updateIcon() {
+            if (window.scrollY === 0 && !isHovering) {
+                icon1.src = './images/home1.1.svg';
+                icon3.src = './images/pro1.1.svg';
+                icon4.src = './images/lab1.1.svg';
+                gif_image.src = './images/1_00.gif';
+            } else {
+                icon1.src = './images/home1.svg';
+                icon3.src = './images/pro1.svg';
+                icon4.src = './images/lab1.svg';
+                gif_image.src = './images/single_gear.gif';
+            }
+        }
+
+        navbar0.addEventListener('mouseover', () => {
+            isHovering = true;
+            updateIcon();
+        });
+
+        navbar0.addEventListener('mouseleave', () => {
+            isHovering = false;
+            updateIcon();
+        });
+
+        window.addEventListener('scroll', updateIcon);
+
+        // Initial check on page load
+        window.addEventListener('load', updateIcon);
+    </script>
     <!-- 使导航栏会隐藏 -->
     <script>
         let lastScrollTop = 0;

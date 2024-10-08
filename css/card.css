@@ -354,3 +354,6 @@ font-size: 16px;
 line-height: 16px;
 margin: 20px 0;
 }
+.piece {
+    position: absolute;
+}
