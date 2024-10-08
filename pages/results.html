@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/tu.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/page_second_half.css">
+    <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="../extras/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../extras/modernizr.2.5.3.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../loading.gif" alt="Loading...">
+    </div>
+
+    <section class="navbar" id="navbar">
+        <!-- logo部分 -->
+        <div class="logo">
+            <a href="#">
+                <img class="nav-logo" src="../images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- nav部分 -->
+        <ul id="nav" class="nav">
+            <li class="slide2"></li>
+            <li class="dropdown-menu">
+                <a href="../index.html" class="dropdown-a">
+                    <img src="../images/home1.svg" alt="" class="icon1">
+                    <img src="../images/home2.svg" alt="" class="icon_home2">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="#" class="dropdown-a">
+                    <img src="../images/pro1.svg" alt="" class="icon3">
+                    <img src="../images/pro2.svg" alt="" class="icon_pro3">
+                    Project
+                </a>
+                <div class="dropdown-content" style="width: 156.48px;">
+                    <a href="./description.html" class="dropdown-page cool-link2">
+                        Description
+                    </a>
+                    <a href="./design.html" class="dropdown-page cool-link2">
+                        Design
+                    </a>
+                    <a href="/pages/NAU-CHINA-DE main 10.4 终.pdf" class="dropdown-page cool-link2">
+                        Results
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Supplement
+                    </a>
+                    <a href="#" class="dropdown-page cool-link2" target="_blank">
+                        Protocol
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown-menu">
+
+                <a href="./notebook.html" class="dropdown-a">
+                    <img src="../images/lab1.svg" alt="" class="icon4">
+                    <img src="../images/lab2.svg" alt="" class="icon_lab4">
+                    Lab Notebook
+                </a>
+            </li>
+            <li class="dropdown-menu">
+                <a href="./member.html" class="dropdown-a">
+                    <img src="../images/single_gear.gif" alt="" class="icon2" id="gif-image">
+                    Team
+                </a>
+                <div class="dropdown-content" style="width: 140.39px;">
+                    <a href="./member.html" class="dropdown-page cool-link2">Members</a>
+                    <a href="#" class="dropdown-page cool-link2">Contribution</a>
+                </div>
+            </li>
+            <script>
+                var gifImage = document.getElementById('gif-image');
+
+                gifImage.addEventListener('mouseenter', function () {
+                    gifImage.src = gifImage.src; // 重新加载 GIF 图像
+                });
+            </script>
+        </ul>
+    </section>
+    <script>
+        $("#nav a").on("click", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+        });
+        $("#nav a").on("mouseover", function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function () {
+            $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+        });
+        var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+        var current = $("li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动，隐藏导航栏
+                navbar.style.top = "-100px"; // 隐藏导航栏
+            } else {
+                // 向上滚动，显示导航栏
+                navbar.style.top = "0"; // 显示导航栏
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+    <section class="table_of_content_container" style="height: 10410px;">
+        <div class="table_of_content">
+            <li><a href="#Pathway" style="font-size: 14px;">Validation of the secretion pathway in Bacillus subtilis</a>
+            </li>
+            <li><a href="#Enzyme" style="font-size: 14px;">Construction and screening mutation libraries separately
+                    of IsPETase, BsLipA and Lipase1028</a></li>
+            <li><a href="#Engineered" style="font-size: 14px;">Morphological changes of PBAT films after degradation</a>
+            </li>
+            <li><a href="#Isolation" style="font-size: 14px;">Isolation of KT2440-tph mutants capable of utilizing 1,
+                    4-butanediol as a carbon source through adaptive laboratory
+                    evolution</a></li>
+            <li><a href="#Reference" style="font-size: 14px;">Reference</a></li>
+        </div>
+    </section>
+
+    <section class="description_container">
+        <div class="title" id="Pathway">Validation of the secretion pathway in Bacillus subtilis</div>
+        <p>To verify whether the enzymes were secreted out of the cells, we cultivated the bacterium on the plates with
+            polycaprolactone (PCL), which can be hydrolyzed by lipases, esterases, keratinases and so on, commonly
+            serving as a
+            model substrate for assessing the extracellular secretion of hydrolases<span class="references">[1]</span>. After incubating at 30 ℃ for 24
+            hours, all
+            colonies exhibited distinct hydrolysis zones (Figure 1), indicating that this pathway enables <em style="font-style: italic;">Bacillus
+            subtilis</em> a stable
+            extracellular protein secretion capability. The successfully constructed protein exocytosis pathway allows
+            for intuitive
+            hydrolysis zones screening of the PBAT-degrading enzyme libraries.</p>
+        <div class="description_img_container">
+            <img src="../images/result/resultpage1.png" alt="" class="description_img" style="width: 400px;position: relative;right: -250px;">
+        </div>
+
+        <div class="design_caption"><strong>Figure 1. PCL plates to verify the secretion ability of Bacillus
+                subtilis.</strong>
+            Bacillus subtilis with recombinant plasmids were cultured on LB agar medium supplemented with PCL within
+            12-24 hours[1].</div>
+
+        <div class="title" id="Enzyme">Construction and screening mutation libraries separately <br>of IsPETase, BsLipA
+            and Lipase1028</div>
+        <p>Error-prone PCR (epPCR) and site-directed mutagenesis techniques were used to construct the mutation
+            libraries of the 3
+            candidate genes, followed by a production of the variants in B. subtilis and screening variants by selection
+            of
+            phenotypes. The ratio of the diameter of the hydrolysis zone to the colony diameter can roughly reflect the
+            ability of
+            the variants to degrade PBAT. Firstly, the strains with successful transformants were sorted from the LB
+            plate only with
+            antibiotics. Then active colonies with larger hydrolysis zones were chosen from LB-agar plates supplemented
+            2% PBAT,
+            followed with the next round screening to evaluate the stability and the diameter of potential colonies
+            which were
+            selected for further analysis (Figure 2).</p>
+
+        <div class="description_img_container">
+            <img src="../images/result/resultpage2.png" alt="" class="description_img">
+        </div>
+        <div class="caption">Figure 2. Screening strategies for mutation libraries.
+        </div>
+        <p>For IsPETase, following two rounds of error-prone PCR, 54 plates were screened to construct a mutation
+            library
+            containing approximately 1,260 variants. In preliminary experiments, we adjust the ion environment of the
+            PCR system
+            through gradient experiments. A number of strains capable of producing small hydrolysis zones were sorted,
+            but they only
+            possessed limited transformation efficiency, poor growth ability and almost no mutations. These may be
+            attributed to
+            adaptive laboratory evolution (ALE) of the strains during growth on PBAT-containing plates, rather than
+            mutations
+            (Figure 3a). Therefore, the error-prone PCR system was optimized by adjusting the concentrations of Mn²⁺ and
+            Mg²⁺ to
+            construct a new mutation library.
+
+
+        </p>
+        <p>For the BsLipA enzyme, a mutation library comprising approximately 1,220 variants was constructed through a
+            single round
+            of error-prone PCR. Two mutants were isolated and designated BM5 and BM10. However, when culturing these
+            mutants on LB
+            agar medium supplemented with PBAT, the hydrolysis zones produced by BM5 and BM10 were smaller compared to
+            the wild type
+            (Figure 3b).</p>
+        <p>Recently, our laboratory identified a new lipase 1028, which exhibits strong degradation ability toward
+            polyurethane
+            (PU). Given that both PBAT and PU are polyester-based degradable materials, we hypothesized that 1028 had
+            evolutionary
+            potential[2]. To test this, a mutation library comprising over 6,000 variants was constructed across 40
+            plates through a
+            single round of error-prone PCR, and successfully isolated six highly efficient mutants, designated 1028_M2
+            through
+            1028_M7 (Figure 3c). These mutants exhibited clear hydrolysis zones after just 4 hours of incubation at 37℃,
+            significantly outperforming the wild-type enzyme in PBAT degradation.</p>
+
+        <div class="description_img_container">
+            <img src="../images/result/resultpage3.png" alt="" class="description_img">
+        </div>
+        <div class="design_caption"><strong>Figure 3. (a) Hydrolysis zones of IsPETase mutants (D1-D14).</strong>
+            Possibly due to the lower evolutionary starting point of IsPETase, the smaller hydrolysis zones and the
+            generally lower
+            degree of transparency. <strong>(b) Hydrolysis zones of BsLipA mutants.</strong> We screened two individuals
+            that were better
+            on PBAT LB plates based on the
+            ratio of the hydrolysis zones to the diameter of the bacteriophage zones and named them BM5, BM10,
+            respectively. <strong>(c)
+                Hydrolysis zones of Lipase 1028 mutants.</strong> The size of the hydrolysis zones incubated at 37℃ for
+            4 h, 6 h, 8
+            h, 10 h, and
+            24 h, respectively, reflected the generally higher PBAT catabolic capacity of mutants of lipase 1028.In
+            addition to the error-prone PCR with random mutagenesis, we performed targeted mutagenesis of three
+            wild-type
+            PBAT-degrading enzymes in parallel using computer simulation in order to achieve better mutation effect.
+        </div>
+        <div class="description_img_container">
+            <img src="../images/result/resultpage4.png" alt="" class="description_img" style="width: 400px;position: relative;right: -250px;">
+        </div>
+        <div class="design_caption"><strong>Figure 4. (a) Molecular docking analysis of IsPETase.
+            </strong> Hydrogen bond interactions between IsPETase and BABTaB.<strong>(b)
+                Molecular docking analysis of BslipA.</strong>Hydrogen bond interactions between BslipA and
+            BABTaB.<strong>(c) Molecular docking
+                analysis of Lipase 1028.</strong>Hydrogen bond interactions between Lipase 1028 and BABTaB.</div>
+
+        <p>Using the web server of HotSpot Wizard 3, we scanned the highly variable residues in the catalytic pocket of
+            IsPETase
+            (Figure 4a), resulting in the mutations of T61N, T61K, and A170S (Table 1) [3]. Then we constructed five
+            mutant groups:
+            A170S, T61K, T61N, T61N+A170S, and T61K+A170S. These mutants were transformed into Bacillus subtilis SCK6
+            for subsequent
+            hydrolysis zone screening and validation (Figure 5a). However, no mutants with significant hydrolysis zones
+            were
+            obtained.</p>
+        <div class="description_img_container">
+            <img src="../images/result/resultpage5.png" alt="" class="description_img">
+        </div>
+
+        <div class="design_caption"><strong>Figure 5. (a) Growth of colonies with the Site-directed mutation of
+                IsPETase.
+            </strong>No obvious hydrolysis zones were found.<strong>(b) The amino acid mutation heatmap of the Lipase
+                1028.</strong>
+        </div>
+        <table>
+            <caption>Table 1. Main characteristics of <i>IsPETase</i> single mutation prediction</caption>
+            <tr>
+                <th>Index</th>
+                <th>Mutation</th>
+                <th>Mutation Energy (kcal/mol)</th>
+                <th>Effect</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>A: Thr61>Asn</td>
+                <td>-0.6</td>
+                <td>STABILIZING</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>A: Thr61>Lys</td>
+                <td>-0.4</td>
+                <td>STABILIZING</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>A: Ala170>Ser</td>
+                <td>-0.4</td>
+                <td>STABILIZING</td>
+            </tr>
+        </table>
+
+        <p>Using the same methodology, predictions for the enzyme BsLipA (Figure 4b) yielded the mutation results Y125F,
+            A75S,
+            T101S, T101A, and A75G (Table 2). We created fifteen mutant groups: Y125F, A75S, T101S, T101A, A75G,
+            Y125F+A75S,
+            Y125F+T101S, Y125F+T101A, Y125F+A75G, A75S+T101S, A75S+T101A, T101S+A75G, T101A+A75G, Y125F+A75S+T101S,
+            Y125F+A75S+T101A, Y125F+T101S+A75G, Y125F+T101A+A75G. After computer simulation of site-directed mutations,
+            the
+            resulting mutation effects were all neutral mutations, so no further experimental validation was carried
+            out, which may
+            have some relation to our inability to obtain favorable mutations during error-prone PCR.</p>
+
+        <table>
+            <caption>Table 2. Main characteristics of <i>BsLipA</i> single mutation prediction</caption>
+            <tr>
+                <th>Index</th>
+                <th>Mutation</th>
+                <th>Mutation Energy (kcal/mol)</th>
+                <th>Effect</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>A: Tyr125>Phe</td>
+                <td>0.8</td>
+                <td>NEUTRAL</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>A: Ala75>Ser</td>
+                <td>0.9</td>
+                <td>NEUTRAL</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>A: Thr101>Ser</td>
+                <td>1.2</td>
+                <td>NEUTRAL</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>A: Thr101>Ala</td>
+                <td>1.6</td>
+                <td>NEUTRAL</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>A: Ala75>Gly</td>
+                <td>2.8</td>
+                <td>NEUTRAL</td>
+            </tr>
+        </table>
+        <p>Using the same methodology, we conducted virtual screening of potential mutation residue sites of Lipase 1028
+            (Figure
+            4c) and determined the specific mutation direction based on the magnitude of changes in mutation energy
+            (Figure 5b). We
+            obtained the following five mutations: T13G, N111W, N111Y, N111F, and T13R (Table 3). Based on the five
+            mutations, we
+            created the following 15 mutation groups, T13G, N111W, N111Y, N111F, T13R, T13G+N111W, T13G+N111Y,
+            T13G+N111F,
+            N111W+T13R, N111Y+T13R and N111F+T13R. We have found the above favorable sites and designed primers, but due
+            to the time
+            limi, we have not yet performed experimental validation.</p>
+
+        <table>
+            <caption>Table 3. Main characteristics of 1028 single mutation prediction</caption>
+            <tr>
+                <th>Index</th>
+                <th>Mutation</th>
+                <th>Mutation Energy (kcal/mol)</th>
+                <th>Effect</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>A: Thr13>Gly</td>
+                <td>-2.4</td>
+                <td>STABILIZING</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>A: Asn111>Trp</td>
+                <td>-1.9</td>
+                <td>STABILIZING</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>A: Asn111>Tyr</td>
+                <td>-1.8</td>
+                <td>STABILIZING</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>A: Asn111>Phe</td>
+                <td>-1.6</td>
+                <td>STABILIZING</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>A: Thr13>Arg</td>
+                <td>-1.5</td>
+                <td>STABILIZING</td>
+            </tr>
+        </table>
+        <div class="title" id="Engineered">Morphological changes of PBAT films after degradation</div>
+        <p>To quantify the degradation ability of BsLipA variants BM5 and BM10, we conducted a PBAT film degradation
+            experiment in
+            LB. In the experiment, the PBAT film in the blank group, which was not inoculated with any strain, remained
+            intact
+            without significant changes after 3 days of incubation (Figure 6). However, the degradation rate of BsLipA
+            film in CK
+            gradually increased over time, exhibiting degradation characteristics such as color whitening and reduced
+            ductility. It
+            is worth noting that our variants BM5 and BM10 also did not demonstrate significant degradation ability on
+            PBAT.
+            Although they showed some degradation ability during plate screening, the treated films only had minor
+            surface changes,
+            and their overall morphology remained relatively stable without obvious degradation observed.</p>
+
+        <div class="description_img_container">
+            <img src="../images/result/resultpage6.png" alt="" class="description_img">
+        </div>
+        <div class="design_caption"><strong>Figure 6. Morphological changes of PBAT films over different degradation
+                periods.</strong>After incubating for 3 days in LB
+            liquid medium without inoculated bacteria, the control group's PBAT remained intact, showing no significant
+            changes. In
+            the BsLipA group, PBAT films exhibited increasing degradation rates, turning whiter in color and decreasing
+            in ductility
+            when co-incubated with different strains. Films treated with BM5 and BM10 showed relatively minor changes,
+            with a slight
+            reduction in overall film area and a few holes appearing on the surface.
+        </div>
+        <div class="title" id="Isolation">Isolation of KT2440-tph mutants capable of utilizing 1, 4-butanediol as a carbon
+            source through adaptive laboratory
+            evolution</div>
+        <p>Given the fact that P.putida KT2440 possesses the genetic inventory allowing growth on 1,4-butanediol as
+            C-source [4],
+            we speculated that ALE might select for 1,4-butanediol utilizing mutants. Therefore, we performed two
+            independent ALE
+            experiments, wild-type strain of P.putida KT2440 and KT2440-tph respectively, and different mineral salt
+            medium (MSM)
+            supplemented with 1,4-butanediol and TPA as sole carbon source: measure the optical density at 600 nm
+            (OD600) every 12
+            hours, and re-inoculated the strains once they reached the stationary phase with a total of three rounds of
+            subculturing
+            (Figure 7). The results indicated that as the iterative cultivation progressed, the growth rate of both the
+            wild-type
+            KT2440 and KT2440-tph continuously increased, demonstrating a stronger capability to utilize BDO and TPA. We
+            plan to
+            continue ALE in subsequent experiments to enhance their ability of degrading BDO and TPA, aiming to achieve
+            rapid
+            clearance of PBAT degradation products.</p>
+        <div class="description_img_container">
+            <img src="../images/result/resultpage7.png" alt="" class="description_img">
+        </div>
+        <div class="design_caption">
+            <strong>Figure 7. Adaptive laboratory evolution (ALE) growth curves (a) and growth rate curves (b) of KT2440
+                and KT2440-tph.</strong>Three consecutive rounds of cultivation were conducted, with OD600 measured
+            every 12 hours. In the minimal salt medium
+            for KT2440, BDO was added as the sole carbon source; for KT2440-tph, the medium was supplemented with TPA as
+            the sole
+            carbon source. The results indicated that as the iterative cultivation progressed, the growth ability of
+            KT2440
+            gradually increased, which was particularly evident during the first 48 hours. (1) In terms of the maximum
+            OD600 values,
+            the third round showed the highest value, with KT2440 and KT2440-tph separately achieving 113.96% and
+            101.44% of the
+            values observed in the second round, and 187.52% and 138.12% of the values in the first round, respectively;
+            (2)
+            Regarding the maximum growth rates, the third round also demonstrated a significant advantage, with KT2440
+            and
+            KT2440-tph separately exhibiting 1.22 times and 2.71 times the growth rates of the second round, and 2 times
+            and 36.52
+            times the growth rates of the first round. These suggests that both KT2440 and KT2440-tph have increasingly
+            strengthened
+            their ability to utilize BDO or TPA as the carbon source with each round of iterative cultivation.
+        </div>
+
+        <div class="title" id="Reference">Reference</div>
+        <ul class="reference-list">
+            <li class="reference-item">
+                [1] S. M. Satti and A. A. Shah, Polyester-based biodegradable plastics: an approach towards sustainable
+                development, <em>Letters in Applied Microbiology</em>, <strong>70</strong>, 413-430, (2020).<br>
+                DOI: <a href="https://doi.org/10.1111/lam.13287" class="doi">https://doi.org/10.1111/lam.13287</a>
+            </li>
+            <li class="reference-item">
+                [2] Z. Jiang, X. Chen, H. Xue, Z. Li, J. Lei, M. Yu, et al., Novel polyurethane-degrading cutinase
+                BaCut1 from
+                Blastobotrys sp. G-9 with potential role in plastic bio-recycling, <em>Journal of Hazardous
+                    Materials</em>,
+                <strong>472</strong>, (2024).<br>
+                DOI: <a href="https://doi.org/10.1016/j.jhazmat.2024.134493"
+                    class="doi">https://doi.org/10.1016/j.jhazmat.2024.134493</a>
+            </li>
+            <li class="reference-item">
+                [3] L. Sumbalova, J. Stourac, T. Martinek, D. Bednar and J. Damborsky, HotSpot Wizard 3.0: web server
+                for
+                automated design of mutations and smart libraries based on sequence input information, <em>Nucleic Acids
+                    Res</em>, <strong>46</strong>, W356-w362, (2018).<br>
+                DOI: <a href="https://doi.org/10.1093/nar/gky417" class="doi">https://doi.org/10.1093/nar/gky417</a>
+            </li>
+            <li class="reference-item">
+                [4] H. Hara, D. Eltis Lindsay, E. Davies Julian and W. Mohn William, Transcriptomic Analysis Reveals a
+                Bifurcated Terephthalate Degradation Pathway in Rhodococcus sp. Strain RHA1, <em>J Bacteriol</em>,
+                <strong>189</strong>, 1641-1647, (2007).<br>
+                DOI: <a href="https://doi.org/10.1128/jb.01322-06" class="doi">https://doi.org/10.1128/jb.01322-06</a>
+            </li>
+        </ul>
+    </section>
+    <script>
+        document.querySelectorAll('.table_of_content a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offset = 100;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <div class="waves-container">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave"
+                    d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+                <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+                <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+            </g>
+        </svg>
+    </div>
+    </div>
+    <section class="footer">
+
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="../images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+                <img src="../images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+                <img src="../images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+                <img src="../images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+                <img src="../images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+                <img src="../images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+                <img src="../images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+                <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+                <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+                <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+                <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+                <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+                <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function handleScroll() {
+            const tags = document.querySelectorAll('.footer-tag');
+            tags.forEach(tag => {
+                if (isInViewport(tag)) {
+                    tag.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+
+</html>
