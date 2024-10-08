@@ -58,7 +58,7 @@
 .grid-wrapper {
     display: grid;
     /* 这一句用的是220px是因为有5列，四行文字220px，剩下的就正好剩四百左右px给logo使用 ，如果用250px的话，为logo剩下的空间不够大，会导致logo过小*/
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(230px, auto));
     grid-gap: 2em;
 }
 
