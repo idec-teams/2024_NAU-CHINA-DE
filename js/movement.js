@@ -47,13 +47,13 @@ function updateCanvasPosition(scrollPositionY) {
         canChangeAnime=true;
     }
     if (scrollPositionY >= 2100) {
-        transformValue = 'translate(-28%,2100px)  scale(0.3)';
+        transformValue = 'translate(-28%,2500px)  scale(0.3)';
     }
-    if (scrollPositionY >= 2800) {
-        transformValue = 'translate(20%,2590px)  scale(0.5)';
+    if (scrollPositionY >= 3000) {
+        transformValue = 'translate(20%,2890px)  scale(0.5)';
     }
-    if (scrollPositionY >= 3300) {
-        transformValue = 'translate(-28%, 3000px)  scale(0.3)';
+    if (scrollPositionY >= 3400) {
+        transformValue = 'translate(-28%, 3390px)  scale(0.3)';
     }
     
     canvas_earth.style.transform = transformValue;
